@@ -9,16 +9,16 @@ import {
 import Contacts from '../Component/Contacts/Contacts';
 import Details from '../Component/Details/Details';
 import Home from '../Component/Home/Home';
+// import News from '../Component/Home/News/News';
 
 
 export default class RouterURL extends Component {
     render() {
         return (
                 <div>
-                    
                     <Switch>
                         <Route exact path="/">
-                                <Home />
+                            <Home />
                         </Route>
                         <Route exact path="/home">
                             <Home />
@@ -33,7 +33,6 @@ export default class RouterURL extends Component {
                             <Contacts />
                         </Route>
                     </Switch>
-                    
                 </div>
                 )
     }

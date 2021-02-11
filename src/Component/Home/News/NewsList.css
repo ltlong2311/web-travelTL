@@ -1,0 +1,18 @@
+.bg-lights{
+    background-color: #fff;
+    position: relative;
+}
+.icon-news{
+    height: 61px;
+    width: 61px;
+}
+.news h2{
+    color: #444;
+}
+.news .about-quote p{
+    color: #6c757d!important;
+}
+
+.news img{
+    border-radius: 10px;
+}

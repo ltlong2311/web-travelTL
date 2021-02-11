@@ -17,7 +17,7 @@ export default class Footer extends Component {
                 </section>
                 <footer>
                 <div className="container">
-                    <p>© Your Website 2020. All Rights Reserved.</p>
+                    <p>© Website Travel TL 2021. Made by LTL.</p>
                 </div>
                 </footer>
             </div>

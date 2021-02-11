@@ -6,7 +6,6 @@ class News extends Component {
     {
         // Chuyển hết sang chữ thường
         str = str.toLowerCase();     
-    
         // xóa dấu
         str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, 'a');
         str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, 'e');
@@ -43,12 +42,9 @@ class News extends Component {
                     </a>
                     <div className="infos">
                         <h4><a  href={"/details/" + this.toSlug(this.props.title) + "." + this.props.newsId + ".html"} >{this.props.title}</a></h4>
-                        {/* <div>
-                        <a href="/tac-gia/ngao-da-cat-binh-qua/" className="author">Ngao Dạ Cật Bình Quả</a>
-                        </div> */}
                         <div>
-                            <span className="stat text-danger">406,530 <small>Chữ </small></span> 
-                            <span className="stat text-primary ml-1">15,183 <small>Đọc</small></span>
+                            <span className="stat text-danger">12/2/2021</span> 
+                            <span className="stat text-primary ml-1">15,183 <small>lượt xem</small></span>
                         </div>
                         <blockquote className="desc p-2">{this.props.quote}</blockquote>
                     </div>

@@ -1,0 +1,102 @@
+/* .bg-dark{
+  background: transparent!important;
+}
+.bg-dark.scrolled{
+  background: #000!important;
+} */
+
+/* .navbar {
+    background: transparent!important;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.default a{
+  color:  #e3f2fd!important;;
+}
+.default button{
+  color:  #e3f2fd!important;;
+}
+.default strong{
+  color:  #e3f2fd!important;;
+}
+.navbar.active {
+    
+    background-color: #e3f2fd!important;
+    color: #191b26!important;
+}
+#navbarResponsive a{
+  font-size: 14px;
+}
+.navbar-nav li a{
+  padding: 5px 15px!important;
+  color: #191b26;
+  font-size: 14px;
+}
+.slide-content{
+  padding: 5px 15px!important;
+  font-size: 1.12rem!important;
+  line-height: inherit;
+} */
+@media (max-width: 992px){
+  #mainNav .navbar-nav>li>a,#mainNav .navbar-nav>li>a:focus{
+    color:rgba(25, 4, 58, 0.89);
+  }
+}
+@media (min-width: 992px){
+  #mainNav .navbar-nav>li>a,#mainNav .navbar-nav>li>a:focus{
+    color:rgba(255, 255, 255, 0.89);
+  }
+}
+@media (min-width: 992px){
+.slide-content{
+  /* padding: 3px 15px!important; */
+  margin: 0;
+  padding: 0;
+  font-size: 0.96rem!important;
+  color:rgba(255, 255, 255, 0.932);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}}
+
+@media (max-width: 992px){
+  .slide-content{
+    font-size: 0.9rem!important;
+    color:#222;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }}
+
+@media (min-width: 992px){
+#mainNav.navbar-shrink {
+    border-color: rgba(34,34,34,.1);
+    background-color:#e3f2fd;
+    color: black;
+}}
+@media (min-width: 992px){
+  #mainNav.navbar-shrink a{
+      color: black!important;
+  }}
+@media (min-width: 992px){
+  #mainNav.navbar-shrink h2{
+      color: #222!important;
+  }}
+
+@media (min-width: 992px){
+#mainNav {
+    border-color: transparent;
+    background-color: transparent;
+}
+}
+@media (min-width: 992px){
+  .ml-header {
+    margin-left: 30px;
+  }
+  }
+.navbar-nav li a{
+  padding: 10px 14px!important;
+  color: #191b26;
+  font-size: 14px;
+}

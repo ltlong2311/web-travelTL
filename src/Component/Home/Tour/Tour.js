@@ -3,21 +3,21 @@ import './Tour.css'
 
 export default function Tour() {
     return (
-        <section className="bg-darks pd-bottom-40">
+        <section className="bg-darks">
         <div className="container">
           <div className="row align-center mg-bt-40">
             <div className="col-md-12 text-center">
               <p>
                 <img src="img/icon-our-asia.svg" alt="" className="icon-svg" />
               </p>
-              <h2 className="hightlight-underline mg-bt-40">TOUR CHÂU Á</h2>
+              <h2 className="hightlight-underline">TOUR CHÂU Á</h2>
               <blockquote className="about-quote">
                 <p>Là quê hương của một số nền văn hóa đầy màu sắc nhất thế giới và những điểm đến kỳ lạ, Châu Á là một bữa tiệc thực sự cho các giác quan. Đi sâu vào lựa chọn quốc gia của chúng tôi để khám phá một loạt các hành trình thú vị và đầy cảm hứng.</p>
               </blockquote>
               <hr />
             </div>
           </div>
-          <div className="row pt-4">
+          <div className="row">
             <div className="col-md-3 mg-bot-20">
               <div className="thumbnail">
                 <a href="tour.html"><img src="img/myanmar2.jpg" alt="" /></a>

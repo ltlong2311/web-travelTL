@@ -34,7 +34,7 @@ class News extends Component {
     render() {
         return (
           
-            <div className="col-6 d-flex mb-2" >
+            <div className="col-md-6 d-flex mb-2" >
                 <div className="news-item d-flex flex-row pl-2">
                     {/* Cách này url khá xấu <a href={"/tin-tuc/" + this.props.title+ "-" + this.props.newsId + "html"} className="cover book-shadow" aria-label=" "> */}
                     <a href={"/details/" + this.toSlug(this.props.title) + "-" + this.props.newsId + ".html"} className="cover book-shadow" aria-label=" ">

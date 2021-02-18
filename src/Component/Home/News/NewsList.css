@@ -13,6 +13,13 @@
     color: #6c757d!important;
 }
 
-.news img{
+.news-list img{
     border-radius: 10px;
+}
+.news-item .infos a:hover{
+    text-decoration: none;
+    opacity: 0.8;
+}
+.news-item img:hover{
+    filter: brightness(90%);
 }

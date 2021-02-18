@@ -1,9 +1,9 @@
 @media (min-width: 992px){
-.des-content{
-    background-color: #fff;
-    position: relative;
-   
-}
+    .des-content{
+        background-color: #fff;
+        position: relative;
+    
+    }
 }
 @media (min-width: 992px){
     .mr-header{
@@ -28,3 +28,60 @@
         top: 0px;
     }
 }
+.about-exo-subscribe input {
+    border: 2px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    color: #444;
+    font-size: 22px;
+    padding: 13px 15px 13px 25px;
+}
+.about-exo-subscribe a {
+    background: #7fb254;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    font-size: 22px;
+    padding: 12px 17px 15px;
+    -webkit-padding-after: 14px;
+    -webkit-padding-before: 14px;
+    display: inline-block;
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.social-links a {
+    display: inline-block !important;
+    width: 35px;
+    height: 35px;
+    line-height: 34px;
+    position: relative;
+    margin: 0 6px;
+    text-align: center;
+    color: #fff;
+    background: #80b157;
+    border-radius: 100%;
+    border: 2px solid #80b157;
+    transition: .4s ease all;
+}
+.fa, .fas, .far, .fal, .fad, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa, .fas, .far, .fal, .fad, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+/* .pd-bottom-40{
+    padding-bottom: 40px;
+} */

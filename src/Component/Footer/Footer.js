@@ -7,7 +7,7 @@ export default class Footer extends Component {
                 <section className="cta">
                 <div className="cta-content">
                     <div className="container">
-                        <h2>WELCOME!</h2>
+                        <h2>See you again!</h2>
                         <div className="be">
                             <a href="/contact" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
                         </div>

@@ -43,15 +43,28 @@
   line-height: inherit;
 } */
 @media (max-width: 992px){
-  #mainNav .navbar-nav>li>a,#mainNav .navbar-nav>li>a:focus{
+  #mainNav .navbar-nav>li>a{
     color:rgba(25, 4, 58, 0.89);
+  }
+  #mainNav .navbar-nav>li>a:focus{
+    color:rgba(83, 71, 241, 0.925);
+  }
+  #mainNav .navbar-nav>li>a:hover{
+    color:rgba(83, 71, 241, 0.925);
   }
 }
 @media (min-width: 992px){
-  #mainNav .navbar-nav>li>a,#mainNav .navbar-nav>li>a:focus{
-    color:rgba(255, 255, 255, 0.89);
+  #mainNav .navbar-nav>li>a{
+    color:rgba(255, 255, 255, 0.96);
+  }
+  #mainNav .navbar-nav>li>a:focus{
+    color:rgb(255, 255, 255, 0.7);
+  }
+  #mainNav .navbar-nav>li>a:hover{
+    color:rgb(255, 255, 255, 0.7);
   }
 }
+
 @media (min-width: 992px){
 .slide-content{
   /* padding: 3px 15px!important; */
@@ -74,11 +87,20 @@
     border-color: rgba(34,34,34,.1);
     background-color:#e3f2fd;
     color: black;
+    border-bottom: #16192b13 solid;
 }}
 @media (min-width: 992px){
   #mainNav.navbar-shrink a{
-      color: black!important;
-  }}
+    color: #191b26!important;
+  }
+  #mainNav.navbar-shrink a:hover{
+    color: #191b2698!important;
+  }
+  #mainNav.navbar-shrink a:focus{
+    color: #191b2698!important;
+    /* border-bottom: 1px solid #141e29b9; */
+  }
+}
 @media (min-width: 992px){
   #mainNav.navbar-shrink h2{
       color: #222!important;

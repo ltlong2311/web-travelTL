@@ -9,6 +9,7 @@ import {
 import Contacts from '../Component/Contacts/Contacts';
 import Details from '../Component/Details/Details';
 import Home from '../Component/Home/Home';
+import Image from '../Component/Image/Image';
 // import News from '../Component/Home/News/News';
 
 
@@ -20,14 +21,15 @@ export default class RouterURL extends Component {
                         <Route exact path="/">
                             <Home />
                         </Route>
-                        <Route exact path="/home">
+                        <Route path="/home">
                             <Home />
                         </Route>
-                        {/* <Route exact path="/news">
-                            <News />
-                        </Route> */}
-                        <Route path="/details/:slug.:id.html">
+                        
+                        <Route path="/details/:slug-:id.html">
                             <Details />
+                        </Route>
+                        <Route path="/images">
+                            <Image />
                         </Route>
                         <Route path="/contacts">
                             <Contacts />

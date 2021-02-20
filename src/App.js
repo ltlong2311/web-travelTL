@@ -1,10 +1,4 @@
 import './App.css';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,  
-//   Link
-// } from "react-router-dom";
 
 import Footer from './Component/Footer/Footer';
 import Nav from './Component/Nav/Nav';

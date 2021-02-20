@@ -1,0 +1,9 @@
+#contact{
+    
+    position: relative;
+}
+.contact-page{
+    background-color: #fff;
+    position: relative;
+    z-index: 998;
+}

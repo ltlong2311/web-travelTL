@@ -1,0 +1,5 @@
+.news-details{
+    position: relative;
+    z-index: 999;
+    background-color: #fff;
+}

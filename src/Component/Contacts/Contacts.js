@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
 import Header from '../Header/Header'
 import Contact from './Contact/Contact'
-
+import './Contacts.css'
 export default class Contacts extends Component {
     
     render() {
         return (
-            <div>
-                <div>
-                    <Header title="Contact" />
-                </div>
-                <div className="container">
-                    <Contact />     
-                </div>
-            </div>
+            <>
+                <Header title="Contact" image='../img/bg-3.jpg'/>
+                <Contact />     
+            </>
         )
     }
 }

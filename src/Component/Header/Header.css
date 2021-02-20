@@ -6,10 +6,18 @@ image{
     height: 100%;
     z-index: -1;
 }
+video{
+    position: relative;
+    top: 0%;
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 @media (min-width: 992px){
     .hero-container{
-        height: 100vh;
-        height: 690px;
+        height: 90vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -19,7 +27,7 @@ image{
     }
 }
 @media (max-width: 992px){
-    .hero-container{
+    .header-main{
         height: 500px;
         width: 100%;
         display: flex;
@@ -29,7 +37,7 @@ image{
     }
 }
 @media (min-width: 992px){
-    .image-main{
+    .header-main{
         position: fixed;
         top: 0;
         width: 100%;
@@ -37,12 +45,12 @@ image{
         background-position: 50% 100%;
         background-size: cover;
         background-attachment: fixed;
-        height: 100%;
+        height: 90vh;
     }
 }
 
 @media (max-width: 992px){
-    .image-main{
+    .slide-main{
         top: 0;
         width: 100%;
         height: 100%;
@@ -51,7 +59,7 @@ image{
 @media (min-width: 992px){
     .hero-content {
         position: absolute;
-        height: 650px;
+        height: 90vh;
         width: 100%;
         color: #fff;
         padding: 0;
@@ -107,7 +115,7 @@ image{
         /* top: 50%; */
         /* transform: translateY(-50%); */
         width: 100%;
-        z-index: 998;
+        z-index: 9;
     }
 }
 

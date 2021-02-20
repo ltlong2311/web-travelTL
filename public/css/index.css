@@ -145,7 +145,6 @@ section h2 {
 #mainNav .navbar-nav>li>a:focus {
    color: #222
 }
-
 /* #mainNav .navbar-nav>li>a:focus:hover,#mainNav .navbar-nav>li>a:hover{color:#fdcc52} */
 @media (min-width:992px) {
    #mainNav {
@@ -393,7 +392,7 @@ section h2 {
       font-size: 12px;
       color: rgba(255, 255, 255, .3)
    }
-
+   
    footer ul li a.active,
    footer ul li a:active,
    footer ul li a:focus,
@@ -435,8 +434,35 @@ section h2 {
       font-size: 11px;
       padding: 15px 45px
    }
-
-
+   .details-page .image-main{
+      position: relative!important;
+      /* height: 400px; */
+   }
+   .details-page .inputSearch{
+      display: none;
+   }
+   .details-page .hero-container{
+      height: 50vh;
+   }
+   .details-page .header-main{
+      height: 50vh;
+   }
+   .details-page .hero-content{
+      height: 50vh;
+   }
+   .images-page .hero-container{
+      height: 50vh;
+   }
+   .images-page .header-main{
+      height: 50vh;
+   }
+   .images-page .hero-content{
+      height: 50vh;
+   }
+   .images-page .inputSearch{
+      display: none;
+   }
+}
    /* slider {
       display: block;
       width: 100%;

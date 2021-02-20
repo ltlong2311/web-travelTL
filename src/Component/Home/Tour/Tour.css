@@ -277,7 +277,7 @@
     color: #fff;
     background: #80b157;
 }
-figure {
+.popular_inner figure {
     margin: 0;
     height: 220px;
 }
@@ -417,7 +417,7 @@ figure {
         animation: three 10s ease-out 1;
     } */
     #show4:checked ~ .tour-card{
-        animation: four 20s ease-out 1;
+        animation: four 10s ease-out 1;
         
         /* margin-left: -50%; */
     }

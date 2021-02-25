@@ -4,7 +4,7 @@ import data from './data.json'
 import './NewsList.css'
 export default function NewPage() {
     return (
-        <section className="bg-lights pt-4 news">
+        <section className="bg-lights pt-4 news" id="news">
             <div className="container">
                 <div className="news-inner pb-2 pd">
                      

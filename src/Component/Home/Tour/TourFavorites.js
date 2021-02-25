@@ -4,7 +4,7 @@ import dataTour from './TourCard/dataTour.json'
 
 export default function TourFavorites(props) {
     return (
-        <section className="bg-lights pt-4 news">
+        <section className="bg-lights pt-4 news" id="tour-favorite">
             <div className="container">
                 <div className="favorites-inner pb-2">
                      
@@ -22,7 +22,8 @@ export default function TourFavorites(props) {
                     </div>
                     <div className="slide-show">
                         <div className="slide-tour row">
-                            <input type='radio' name="slide-tour" id="show1" defaultChecked />
+                            {/* <input type='radio' name="slide-tour" id="show1" defaultChecked /> */}
+                            <input type='radio' name="slide-tour" id="show1" />
                             <input type='radio' name="slide-tour" id="show2" />
                             <input type='radio' name="slide-tour" id="show3" />
                             <input type='radio' name="slide-tour" id="show4" />
@@ -51,8 +52,8 @@ export default function TourFavorites(props) {
                     </div> */}
                     <div className="navigation-dot">
                         <label htmlFor="show1" className="manual-btn" />
-                        {/* <label htmlFor="show2" className="manual-btn" />
-                        <label htmlFor="show3" className="manual-btn" /> */}
+                        <label htmlFor="show2" className="manual-btn" />
+                        <label htmlFor="show3" className="manual-btn" />
                         <label htmlFor="show4" className="manual-btn" />
                     </div>
 

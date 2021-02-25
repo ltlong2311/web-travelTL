@@ -9,7 +9,7 @@ export default class Footer extends Component {
                     <div className="container">
                         <h2>See you again!</h2>
                         <div className="be">
-                            <a href="/contact" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+                            <a href="/home" className="btn btn-outline btn-xl js-scroll-trigger">Trở lại!</a>
                         </div>
                     </div>
                 </div>

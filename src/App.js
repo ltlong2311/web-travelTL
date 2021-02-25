@@ -1,16 +1,14 @@
-import './App.css';
+import "./App.css";
 
-import Footer from './Component/Footer/Footer';
-import Nav from './Component/Nav/Nav';
-import RouterURL from './Router/RouterURL';
+import Footer from "./Component/Footer/Footer";
+import Nav from "./Component/Nav/Nav";
+import RouterURL from "./Router/RouterURL";
 import {
   BrowserRouter as Router,
   // Switch,
-  // Route,  
+  // Route,
   // Link
 } from "react-router-dom";
-
-
 
 function App() {
   return (

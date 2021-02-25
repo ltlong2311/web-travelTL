@@ -49,6 +49,7 @@ section.features .section-heading h2 {
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
+    overflow: hidden;
 }
 /* .slide-image{
     
@@ -56,25 +57,25 @@ section.features .section-heading h2 {
 
 slider {
     display: flex; 
-    width: 90%;
+    width: 500%;
     height: 50%;
     background-color: transparent;
     overflow: hidden;
     position: absolute;
+    left: 0;
+    animation: slide 20s infinite;
  }
  slider > * {
-    position: absolute;
+    position: relative;
+    left: 0px;
     display: block;
-    width: 100%;
+    width: 20%;
     height: 100%;
     background: #fff;
-    animation: slide 12s infinite;
     overflow: hidden;
  } 
 
  slide:nth-child(1) {
-    left: 0%;
-    animation-delay: -1s;
     border-radius: 50%;
     background-color: cyan;
     background-image: url(./slide/img.jpg) ;
@@ -83,8 +84,7 @@ slider {
  } 
 
  slide:nth-child(2) {
-    left: 0%;
-    animation-delay: 2s;
+    /* animation-delay: 2s; */
     border-radius: 50%;
     background-image: url(./slide/slide-4.jpg) ;
     background-color: cyan;
@@ -92,8 +92,6 @@ slider {
     background-position: center;
  }
  slide:nth-child(3) {
-    left: 0%;
-    animation-delay: 5s;
     border-radius: 50%;
     background-image: url(./slide/travel-3.jpg) ;
     background-color: transparent;
@@ -101,14 +99,20 @@ slider {
     background-position: center;
  }
  slide:nth-child(4) {
-    left: 0%;
-    animation-delay: 8s;
+    /* animation-delay: 4s; */
     border-radius: 50%;
     background-color: #fff;
     background-image: url(./slide/travel-4.jpg) ;
     background-size: cover;
     background-position: center;
  }
+ slide:nth-child(5) {
+  border-radius: 50%;
+  background-color: cyan;
+  background-image: url(./slide/img.jpg) ;
+  background-size: cover;
+  background-position: center;
+} 
  slide p {
     font-family: 'Courier New', Courier, monospace;
     font-size:70px;
@@ -119,14 +123,26 @@ slider {
     color: #fff;
  }
  
- @keyframes slide{
+ /* @keyframes slide{
     0% {left: 100%; width: 100%;}
     5% {left: 0%;}
     25% {left: 0%}
     30% {left: -100%; width: 100%;}
     30.0001% {left: -100%; width: 0%;}
     100% {left: 100%; width: 0%;}
- }
+ } */
+ 
+ @keyframes slide{
+  0%{left: 0%;}
+  20%{left: 0%;}
+  25%{left: -100%;}
+  45%{left: -100%;}
+  50%{left: -200%;}
+  70%{left: -200%;}
+  75%{left: -300%;}
+  95%{left: -300%;}
+  100%{left: -400%;}
+}
 
  /* @keyframes slide{
   0%

@@ -3,7 +3,7 @@ import tourData from '../../tourData.json'
 import TourList from './TourCard/TourList'
 export default function TourNew() {
     return (
-        <section className="bg-darks">
+        <section className="bg-darks" id="tour-recommend">
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">

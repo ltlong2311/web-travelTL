@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Travel TL</title>
   </head>
-  <body>
+
+  <body data-spy="scroll" data-target="#mainNav" data-offset="50">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -31,6 +32,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -38,9 +40,35 @@
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
     <script type="text/javascript">
-      window.addEventListener("scroll", function(){
-        var lav
-      })
+      // window.addEventListener("scroll", function(){
+      //   var lav
+      // })
+      
+      // $(document).ready(function(){
+ 
+      //   $('body').scrollspy({target: "#mainNav", offset: 50});  
+
+      //   $("#mainNav a").on('click', function(event) {
+
+      //     if (this.hash !== "") {
+
+      //       event.preventDefault();
+
+      //       var hash = this.hash;
+
+      //       $('html, body').animate({
+      //         scrollTop: $(hash).offset().top
+      //       }, 800, function(){
+      //         window.location.hash = hash;
+      //       });
+      //     }  
+      //   });
+      // });
+
+      // $(document).ready(function(){
+      //   $('body').scrollspy({target: ".navbar", offset: 50});   
+      // });
     </script>
+    
   </body>
 </html>

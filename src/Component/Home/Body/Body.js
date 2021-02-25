@@ -4,10 +4,10 @@ import "./Body.css";
 export default class Body extends Component {
   render() {
     return (
-      <div className="des-content">
+      <div className="des-content" id="intro">
           <div className="mr-header">
             <section className="features" id="features">
-              <div className="container">
+              <div className="container" >
                 <div className="section-heading text-center">
                   <h2> Welcome to Travel TL </h2>{" "}
                   <p className="text-muted">
@@ -19,10 +19,11 @@ export default class Body extends Component {
                 <div className="col-lg-4 slide">
                 
                     <slider>
-                      <slide><p>TL</p></slide>
-                      <slide><p></p></slide>
-                      <slide><p></p></slide>
-                      <slide><p></p></slide>
+                      <slide><p>1</p></slide>
+                      <slide><p>2</p></slide>
+                      <slide><p>3</p></slide>
+                      <slide><p>4</p></slide>
+                      <slide><p>5</p></slide>
                     </slider>
                 
                 </div>

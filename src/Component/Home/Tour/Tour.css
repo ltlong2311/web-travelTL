@@ -408,36 +408,100 @@
     }
     #show1:checked ~ .tour-card{
         color: #80b157;
-        animation: tour 30s ease infinite;
+        animation: one 30s ease infinite;
     }
-    /* #show2:checked ~ .tour-card{
-        animation: two 10s ease 1;
+    #show2:checked ~ .tour-card{
+        animation: two 30s ease infinite;
     }
     #show3:checked ~ .tour-card{
-        animation: three 10s ease-out 1;
-    } */
+        animation: three 30s ease infinite;
+    }
     #show4:checked ~ .tour-card{
-        animation: four 10s ease-out 1;
+        animation: four 30s ease infinite;
         
         /* margin-left: -50%; */
     }
     /* @keyframes one {
-        0%{left: 0%}
+        0%{left: -16.666666667%;}
+        5%{left: 0%;}
+        25% {left: 0%;}
+        30% {left: -16.666666667%;}
+        50% {left: -16.666666667%;}
+        55% {left: -33,33333333%;}
+        75% {left: -33,33333333%;}
+        80%{left: -50%;}
+        100%{left: -50%;}
     } */
-    /* @keyframes two {
-        0%{left: 0%}
-        20%{left: -16.666666667%;}
-        100% {left: -16.6666667%;}
+    @keyframes one {
+        0%{left:-16.666666667%;}
+        5%{left: 0;}
+        25%{left: 0;}
+        30%{left:-16.666666667%;}
+        50%{left:-16.666666667%;}
+        55%{left: -33.3333333%;}
+        75%{left: -33.3333333%;}
+        80%{left: -50%;}
+        100%{left: -50%;}
+    }
+    @keyframes two {
+        0%{left: 0;}
+        5%{left:-16.666666667%;}
+        25%{left:-16.666666667%;}
+        30%{left:-33.3333333%;}
+        50%{left:-33.3333333%;}
+        55%{left: -50%;}
+        75%{left: -50%;}
+        80%{left: 0;}
+        100%{left: 0;}
     }
     @keyframes three {
-        0%{left: 0%}
-        20%{left: -33.3333333%;}
-        100% {left: -33.3333333%;}
-    } */
+        /* 0%{left: -16.666666667%;}
+        5%{left: -33,33333333%;}
+        25%{left: -33,33333333%;}
+        30%{left: -50%;}
+        50%{left: -50%;}
+        55%{left: 0%;}
+        75%{left: 0%;}
+        80%{left: -16.666666667%;}
+        100%{left:-16.666666667%;} */
+
+        0%{left:-16.666666667%;}
+        5%{left:-33.3333333%;}
+        25%{left:-33.3333333%;}
+        30%{left: -50%;}
+        50%{left: -50%;}
+        55%{left: 0%;}
+        75%{left: 0%;}
+        80%{left: -16.666666667%;}
+        100%{left: -16.666666667%;}
+    }
     @keyframes four {
-        0%{left: 0%}
-        10%{left: -50%;}
-        90% {left: -50%;}
-        100%{left: 0%;}
+        0%{
+            left: -33.33333333%;
+        }
+        5%{
+            left: -50%;
+        }
+        25%{
+            left: -50%;
+        }
+        30%{
+            left: 0;
+        }
+        50%{
+            left: 0;
+        }
+        55%{
+            left: -16.6666667%;
+        }
+        75%{
+            left: -16.6666667%;
+        }
+        80%{
+            left: -33.3333333%;
+        }
+        100%{
+            left: -33.3333333%;
+        }
     }
 }

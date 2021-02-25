@@ -30,7 +30,7 @@ function Home() {
     const image = images[count];
 
     return (
-        <>   
+        <div id="home">   
             <Header title="DU LỊCH TL" image={image} />
             {/* <marquee width="100%" behavior="scroll" bgcolor="#dadfe1" className='marketing' alt="hello">  
                 Chào mừng đến với Website du lịch TL, hãy lựa chọn và tận hưởng những chuyến du lịch tuyệt vời thôi nào! 
@@ -45,7 +45,7 @@ function Home() {
             <TourNew />
             <NewsList />
             <Subscribe />
-        </>
+        </div>
     )
 }
 

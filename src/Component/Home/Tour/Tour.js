@@ -3,14 +3,14 @@ import './Tour.css'
 
 export default function Tour() {
     return (
-        <section className="bg-darks">
+        <section className="bg-darks" id="destination">
         <div className="container">
           <div className="row align-center mg-bt-40">
             <div className="col-md-12 text-center">
               <p>
                 <img src="img/icon-our-asia.svg" alt="" className="icon-svg" />
               </p>
-              <h2 className="hightlight-underline">TOUR CHÂU Á</h2>
+              <h2 className="hightlight-underline">ĐIỂM ĐẾN CHÂU Á</h2>
               <blockquote className="about-quote">
                 <p>Là quê hương của một số nền văn hóa đầy màu sắc nhất thế giới và những điểm đến kỳ lạ, Châu Á là một bữa tiệc thực sự cho các giác quan. Đi sâu vào lựa chọn quốc gia của chúng tôi để khám phá một loạt các hành trình thú vị và đầy cảm hứng.</p>
               </blockquote>

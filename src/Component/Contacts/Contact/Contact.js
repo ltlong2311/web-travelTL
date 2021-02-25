@@ -50,7 +50,7 @@ export default class Contact extends Component {
           return <Redirect to="/" />;
         }
         return (
-             <div className="contact-page">
+             <div className="contact-page" id="contacts">
                 <div className="container">
                   <section className="page-section" id="contact">
                     <div className="container">

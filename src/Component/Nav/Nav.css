@@ -15,9 +15,24 @@ ul{
 .navbar a:hover{
   text-decoration: none;
 }
-
+.sub-menu .nav-link{
+  padding: 0!important;
+}
+.sub-menu a.active {
+  color: rgb(174, 168, 211, 0.8) !important;
+  background-color: transparent;
+  transition: 0.2s;
+}
+#mainNav .navbar-nav > li > a.active {
+  color: rgb(174, 168, 211, 0.8) !important;
+  background-color: transparent;
+  transition: 0.2s;
+}
 .navbar ul > li .sub-menu.responsible {
-  width: 240px;
+  width: 200px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #191b26;
 }
 .navbar-nav h2{
   font-weight: 700;
@@ -25,7 +40,7 @@ ul{
 .sub-menu ul > li {
   color: #FFF;
   display: block;
-  padding: 8px 15px;
+  padding: 3px 8px;
   line-height: 20px;
   position: relative;
 }
@@ -101,6 +116,9 @@ ul{
     color:rgb(174, 168, 211, 0.8)!important;
     
   }
+  #mainNav.navbar-shrink .navbar-nav>li>a{
+    color: #191b26;
+  }
   .navbar h2:hover{
     transform: scale(1.05);
   }
@@ -129,9 +147,7 @@ ul{
     top: 100px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.24);
   }
-  li.nav-icon-responsible-about {
-    /* background: url() no-repeat; */
-  }
+  
   .slide-content{
   /* padding: 3px 15px!important; */
   margin: 0;
@@ -146,16 +162,19 @@ ul{
       color: black;
       border-bottom: #16192b13 solid;
   }
-  #mainNav.navbar-shrink a{
-    color: #191b26!important;
-  }
+  
   #mainNav.navbar-shrink a:hover{
-    color: #191b2698!important;
+    color: rgb(174, 168, 211, 0.8) !important;
   }
   #mainNav.navbar-shrink a:focus{
-    color: #191b2698!important;
+    color: rgb(174, 168, 211, 0.8) !important;
     /* border-bottom: 1px solid #141e29b9; */
   }
+  /* .sub-menu a.active {
+    color: rgb(174, 168, 211, 0.8) !important;
+    transition: 0.2s;
+  } */
+
   #mainNav.navbar-shrink h2{
       color: #222!important;
       text-decoration: none;
@@ -166,6 +185,9 @@ ul{
   }
   .ml-header {
     margin-left: 30px;
+  }
+  .navbar ul > li .sub-menu a{
+    text-align: left;
   }
 }
 
@@ -178,4 +200,5 @@ ul{
   font-size: 12px;
   font-weight: 600!important;
   text-transform: uppercase;
+  
 }

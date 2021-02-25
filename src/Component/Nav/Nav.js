@@ -76,11 +76,19 @@ export default function Nav() {
                 TOUR
               </Link>
               <div className="sub-menu responsible">
-                <div className="row ">
-                  <div className="col-md-12 ">
+                <div className="row">
+                  <div className="col-md-12">
                     <ul>
-                      <li className="nav-icon nav-icon-responsible-about "><Link smooth to="/#tour-favorite" data-target="#tour-favorite">TOUR YÊU THÍCH</Link></li>
-                      <li className="nav-icon nav-icon-responsible-hotel "><Link smooth to="/#tour-recommend" data-target="#tour-recommend">TOUR ĐỀ CỬ</Link></li>
+                      <li>
+                        <Link smooth to="/#tour-favorite" data-target="#tour-favorite" className="nav-link">
+                          <img src="img/icon-menu/icon-tour1.png" alt="" className="icon-nav" /> TOUR YÊU THÍCH
+                        </Link>
+                      </li>
+                      <li>
+                        <Link smooth to="/#tour-recommend" data-target="#tour-recommend" className="nav-link">
+                          <img src="img/icon-menu/icon-tour2.png" alt="" className="icon-nav" /> TOUR ĐỀ CỬ
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -117,7 +125,8 @@ export default function Nav() {
               {/* <a className="nav-link js-scroll-trigger" href="#contacts"> LIÊN HỆ</a> */}
               <Link
                 to="/contacts"
-                className="nav-link js-scroll-trigger"
+                className="nav-link"
+                data-target="#contacts"
               >
                 <i className="fas fa-fax"></i> LIÊN HỆ
               </Link>
@@ -126,6 +135,7 @@ export default function Nav() {
               <Link
                 to="/images"
                 className="nav-link js-scroll-trigger"
+                data-target="#"
               >
                 <i className="fas fa-users"></i>DIỄN ĐÀN
               </Link>

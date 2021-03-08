@@ -28,7 +28,7 @@ export default function Report() {
               type="email"
               required
             />{" "}
-            <a href="tour-news.html" className="btn-about-subscribe">
+            <a href="tour-news.html" className="btn-subscribe">
               Subscribe
             </a>
           </form>

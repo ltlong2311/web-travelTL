@@ -69,8 +69,75 @@ p {
 }
 
 @media (max-width: 992px) {
+   footer {
+    padding: 20px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    background-color: rgb(59, 59, 59);
+  }
+  
+  footer p {
+    font-size: 12px;
+    margin: 0;
+  }
   section {
     padding: 5px 0;
+  }
+  #subscribe{
+    padding: 15px 0!important;
+  }
+  #subscribe h2{
+    font-size: 30px;
+    padding-top: 10px;
+  }
+  #subscribe p{
+    font-size: 18px;
+    padding-top: 5px;
+  }
+  #subscribe input {
+    border: 2px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    color: #444;
+    width: 55%;
+    font-size: 22px;
+    padding: 10px 10px 10px 15px;
+  }
+  #subscribe .btn-subscribe{
+    background: #7fb254;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    font-size: 19px;
+    padding: 16px 17px 14px;
+    margin-left: 10px;
+    -webkit-padding-after: 14px;
+    -webkit-padding-before: 14px;
+    display: inline-block;
+  }
+  #subscribe .social-links{
+    padding-bottom: 10px;
+  }
+  .cta{
+    display: none;
+  }
+  .favorites-inner .row{
+    margin: 0;
+  }
+  
+  .tour-detail-page .image-main, .details-page .image-main {
+    height: 40vh;
+  }
+  .tour-detail-page .inputSearch, .details-page .image-main{
+    display: none;
+  }
+  .tour-detail-page .hero-container, .details-page .image-main {
+    height: 40vh;
+  }
+  .tour-detail-page .header-main, .details-page .image-main {
+    height: 40vh;
+    position: relative;
+  }
+  .tour-detail-page .hero-content, .details-page .image-main {
+    height: 40vh;
   }
 }
 
@@ -383,9 +450,9 @@ section h2 {
   }
 
   footer {
-    padding: 25px 0;
+    padding: 20px 0;
     text-align: center;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.4);
     background-color: #222;
   }
 
@@ -461,18 +528,36 @@ section h2 {
   .details-page .hero-content {
     height: 50vh;
   }
-  .images-page .hero-container {
+
+  .tour-detail-page .image-main {
+    height: 50vh;
+  }
+  .tour-detail-page .inputSearch{
+    display: none;
+  }
+  .tour-detail-page .hero-container {
+    height: 50vh;
+  }
+  .tour-detail-page .header-main {
+    height: 50vh;
+    position: relative;
+  }
+  .tour-detail-page .hero-content {
+    height: 50vh;
+  }
+  .the-new-forum .hero-container {
     height: 100vh;
   }
-  .images-page .header-main {
+  .the-new-forum .header-main {
     height: 100vh;
   }
-  .images-page .hero-content {
+  .the-new-forum .hero-content {
     height: 100vh;
   }
-  .images-page .inputSearch {
-    /* display: none; */
-  }
+  /* .images-page .inputSearch {
+    display: none;
+  } */
+ 
   .slide:hover {
     transform: scale(1.08);
     cursor: move;

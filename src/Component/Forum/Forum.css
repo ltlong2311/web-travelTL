@@ -1,0 +1,62 @@
+.forum-page {
+    /* background-color: #f8f9fa; */
+    background-color:#e6ecf0;
+    position: relative;
+    z-index: 998;
+}
+.forum-page .main-content {
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+.forum-page .stories-list{  
+    text-align: left;
+}
+.forum-page .topic-emo.L {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/1200px-Star_icon_stylized.svg.png);
+}
+.forum-page .story-item .story-meta>a, .forum-page .story-item .story-meta>span, .forum-page .story-item .story-meta>time, .forum-page .story-item .user-item>span {
+    color: #919191;
+    font-size: 14px;
+    text-align: center;
+}
+a, a:hover {
+    text-decoration: none;
+}
+.forum-page .forum-rules strong{
+    color: #6c7a89;
+}
+.forum-page .story-react .num-liked {
+    font-size: 12px;
+    color: #919191;
+}
+.forum-page .story-react i {
+    font-size: 12px;
+}
+.forum-page .stories-list .story-item .story-title{
+    color: rgb(23,96,147);
+    font-size: 16px;
+    /* color: #919191; */
+    font-weight: 600;
+}
+.forum-page .story-item .story-title:hover{
+    color: rgba(23, 95, 147, 0.842);
+}
+.forum-page .stories-list .story-item .five-users .user-item{
+    display: inline-block;
+}
+.forum-page .stories-list .story-item .five-users .user-item span{
+    display: inline-block;
+}
+
+.forum-page .stories-list .story-item .five-users .user-item img{
+    border-radius: 50%;
+    vertical-align: text-top;
+    padding-bottom: 0px;
+}
+.forum-page .stories-list thead>tr>th {
+    color: #444;
+    font-size: 16px;
+    /* color: #919191; */
+    font-weight: 500;
+    white-space: nowrap;
+}

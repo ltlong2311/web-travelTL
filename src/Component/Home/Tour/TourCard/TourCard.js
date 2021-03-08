@@ -27,9 +27,9 @@ function TourCard(props) {
                             <img src="img/star1.png" alt="" />
                             <img src="img/star2.png" alt="" />
                             </div>
-                            <div className="nums">- {props.reviews} Đánh giá</div>
+                            <div className="nums"> {props.reviews} Đánh giá</div>
                         </div>
-                        <div className="right_side"><a href="Tour.html" className="btn-default btn1">Chi tiết</a></div>
+                        <div className="right_side"><a href="tour-detail.html" className="btn-default btn1">Chi tiết</a></div>
                     </div>
                 </div>
                 </div>

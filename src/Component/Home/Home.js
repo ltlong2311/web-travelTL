@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Header from '../Header/Header';
-import Body from './Body/Body';
+import IntroContent from './IntroContent/IntroContent';
 import './Home.css'
 import Tour from './Tour/Tour';
 import NewsList from './News/NewsList';
@@ -35,11 +35,7 @@ function Home() {
             {/* <marquee width="100%" behavior="scroll" bgcolor="#dadfe1" className='marketing' alt="hello">  
                 Chào mừng đến với Website du lịch TL, hãy lựa chọn và tận hưởng những chuyến du lịch tuyệt vời thôi nào! 
             </marquee>  */}
-            <div className="des-content">
-                <div className="mr-header">
-                    <Body />
-                </div>
-            </div>
+            <IntroContent />
             <Tour />
             <TourFavorites />
             <TourNew />

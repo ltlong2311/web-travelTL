@@ -9,7 +9,8 @@ import {
 import Contacts from "../Component/Contacts/Contacts";
 import Details from "../Component/Details/Details";
 import Home from "../Component/Home/Home";
-import Image from "../Component/Image/Image";
+import Forum from "../Component/Forum/Forum";
+import TourDetailPage from "../Component/Pages/TourPage/TourDetailPage";
 // import News from '../Component/Home/News/News';
 
 export default class RouterURL extends Component {
@@ -23,14 +24,20 @@ export default class RouterURL extends Component {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/details/:slug-:id.html">
-            <Details />
-          </Route>
           <Route path="/images">
-            <Image />
+            <Forum />
           </Route>
           <Route path="/contacts">
             <Contacts />
+          </Route>
+          <Route path="/details/:slug-:id.html">
+            <Details />
+          </Route>
+          <Route path="/tour/:slug-:id.html">
+            <Details />
+          </Route>
+          <Route path="/tour-detail.html">
+            <TourDetailPage />
           </Route>
         </Switch>
       </>

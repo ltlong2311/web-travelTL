@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 // import {
 //     // BrowserRouter as Router,
 //     // Switch,
@@ -7,9 +6,11 @@ import React, { useState } from "react";
 
 //     NavLink
 // } from "react-router-dom";
+// import ScrollspyNav from "react-scrollspy-nav";
+import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Nav.css";
-// import ScrollspyNav from "react-scrollspy-nav";
+
 
 export default function Nav() {
   const [navbar, setNavbar] = useState(false);
@@ -25,7 +26,6 @@ export default function Nav() {
 
   window.addEventListener("scroll", changeBackgroundNavbar);
   return (
-    // <nav className={navbar ? 'navbar navbar-light navbar-expand-lg fixed-top' : 'navbar navbar-light default navbar-expand-lg fixed-top'}>
     <nav
       className={
         navbar

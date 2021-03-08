@@ -27,7 +27,7 @@
       "id":4432,
       "title":"Fuji Honshu",
       "nation":"Nhật Bản",
-      "image":"img/japan2.jpg",
+      "image":"img/japan21.jpg",
       "icon": "img/flags/icon-japan.png",
       "longTime": 8
    },
@@ -49,50 +49,50 @@
    },
    {
       "id":8314,
-      "title":"Hội An - Quảng Nam",
-      "nation":"Việt Nam",
-      "image":"img/vietnam2.jpg",
-      "icon": "img/flags/icon-vietnam.png",
+      "title":"Tháp đôi Petronas",
+      "nation":"Malaysia",
+      "image":"img/malaysia.jpg",
+      "icon": "img/flags/icon-malaysia.png",
       "longTime": 4
    },
    {
-      "id":5423,
-      "title":"Wat Phnom & Phnom Penh",
-      "nation":"Campuchia",
-      "image":"img/we-032.jpg",
-      "icon": "img/flags/icon-cambodia.png",
-      "longTime": 7
-   },
-   {
-      "id":9323,
-      "title":"Bắc Kinh",
-      "nation":"Trung Quốc",
-      "image":"img/we-02.jpg",
-      "icon": "img/flags/icon-china.png",
-      "longTime": 6
-   },
-   {
-      "id":8421,
-      "title":"Fuji Honshu",
-      "nation":"Nhật Bản",
-      "image":"img/japan2.jpg",
-      "icon": "img/flags/icon-japan.png",
-      "longTime": 8
-   },
-   {
       "id":9031,
-      "title":"Wat Phra Kaew - Bangkok",
+      "title":"Đảo Koh Lanta",
       "nation":"Thái Lan",
-      "image":"img/we-01.jpg",
+      "image":"https://thenomadvisor.com/wp-content/uploads/2019/07/wheretostayinkohlipe.jpg",
       "icon": "img/flags/icon-thailand.png",
       "longTime": 5
    },
    {
+      "id":9323,
+      "title":"Thành Osaka",
+      "nation":"Nhật Bản",
+      "image":"img/japan56.jpg",
+      "icon": "img/flags/icon-japan.png",
+      "longTime": 6
+   },
+   {
+      "id":5423,
+      "title":"Marina Barrage",
+      "nation":"Singapore",
+      "image":"img/singapore3.jpg",
+      "icon": "img/flags/icon-singapore.png",
+      "longTime": 7
+   },
+   {
+      "id":8421,
+      "title":"Bà Nà Hill - Đà Nẵng",
+      "nation":"Việt Nam",
+      "image":"img/vietnam5.jpg",
+      "icon": "img/flags/icon-vietnam.png",
+      "longTime": 8
+   },
+   {
       "id":4829,
-      "title":"Đảo Bali",
-      "nation":"Indonesia",
-      "image":"https://www.dulichdaiviet.com/temp/-uploaded_tourdulichbali-indonesia-5ngay4demtuhanoi3_thumb_1200x1200.jpg",
-      "icon": "img/flags/icon-indonesia.png",
+      "title":"Quần đảo Maldives",
+      "nation":"Maldives",
+      "image":"https://images.hdqwalls.com/download/maldives-tl-1920x1080.jpg",
+      "icon": "img/flags/icon-multi-country.png",
       "longTime": 6
    }
       

@@ -225,6 +225,7 @@
     display: inline-block;
     font-size: 12px;
     color: #c2c2c2;
+    padding-left: 5px;
 }
 /* .clearFix::after{
     clear: both;
@@ -504,4 +505,20 @@
             left: -33.3333333%;
         }
     }
+}
+
+#tour-details hr{
+    max-width: 150px;
+    margin: 25px auto 0;
+    border-width: 3px;
+    border-color: #ccc;
+}
+#tour-details .rate{
+    padding-top: 10px;
+}
+#tour-details .rate .nums {
+    display: inline-block;
+    font-size: 12px;
+    color: #c2c2c2;
+    padding-left: 5px;
 }

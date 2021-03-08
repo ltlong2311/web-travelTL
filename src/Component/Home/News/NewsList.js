@@ -1,6 +1,6 @@
 import React from 'react'
 import News from './News'
-import data from './data.json'
+import data from '../../data.json'
 import './NewsList.css'
 export default function NewPage() {
     return (
@@ -34,6 +34,7 @@ export default function NewPage() {
                                 <News key={key}
                                 newsId={value.id}
                                 img={value.img}
+                                postTime={value.postTime}
                                 title={value.title}
                                 quote={value.quote}/>
                                 )

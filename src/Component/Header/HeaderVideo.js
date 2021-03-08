@@ -9,7 +9,7 @@ export default function Header(props) {
                 <div className="hero-content">
                     <div id="wrapper">
                         <h1>{props.title}</h1>
-                        <div className="inputSearch">
+                        {/* <div className="inputSearch">
                             <form action="/Search" method="get">
                                 <div className="title-slide" >
                                     <div className='icon-place'><i className="fas fa-map-marker-alt" /></div>
@@ -17,7 +17,8 @@ export default function Header(props) {
                                     <div type="submit" className="btn btn-primary" id="search" >Tìm Kiếm</div>
                                 </div>
                             </form>
-                        </div>
+                        </div> */}
+                        <p></p>
                     </div>
                 </div>
             </div>

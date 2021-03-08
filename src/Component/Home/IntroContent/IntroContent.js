@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { Component } from "react";
-import "./Body.css";
+import "./Content.css";
 export default class Body extends Component {
   render() {
     return (
-      <div className="des-content" id="intro">
-          <div className="mr-header">
-            <section className="features" id="features">
+        <>
+            <section className="features des-content" id="intro">
               <div className="container" >
                 <div className="section-heading text-center">
                   <h2> Welcome to Travel TL </h2>{" "}
@@ -98,8 +97,7 @@ export default class Body extends Component {
                 </div>
               </div>
             </section>
-          </div>
-      </div>
+      </>
      
     );
   }

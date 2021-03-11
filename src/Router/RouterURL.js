@@ -24,7 +24,7 @@ export default class RouterURL extends Component {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/images">
+          <Route path="/forum">
             <Forum />
           </Route>
           <Route path="/contacts">

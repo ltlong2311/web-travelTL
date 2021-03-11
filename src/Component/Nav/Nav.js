@@ -133,7 +133,7 @@ export default function Nav() {
             </li>
             <li className="nav-item">
               <Link
-                to="/images"
+                to="/forum"
                 className="nav-link js-scroll-trigger"
                 data-target="#"
               >

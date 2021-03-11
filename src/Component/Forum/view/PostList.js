@@ -1,11 +1,52 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Post from './Post'
+import {firebaseConnect} from '../../../firebaseConnect' 
+import firebase from 'firebase';
+import EditPost from './EditPost';
 
-function PostList() {
+console.log(firebaseConnect);
+
+
+
+function PostList(props) {
+    const [editPost, setEditPost] = useState(false);
+
+    const changeEditPost = () => {
+      setEditPost(!editPost);
+      // console.log(editPost);
+    }
+    useEffect( () => {
+      console.log(editPost);
+  }, [editPost]);
+
+    // const isShowEditPost = () => {
+    //   if(editPost === true){
+    //     return <EditPost />
+    //   }
+    // }
+    
+    const pushData= () => {
+      var connectData = firebase.database().ref('post');
+      connectData.push({
+        title: "Những điều cần lưu ý khi đi Nhật",
+        category: "Hỏi đáp du lịch",
+        postDate: "24:21 26/02/2021 GMT+7",
+        poster: "nguoibian1"
+      })
+      console.log("ban vưa them moi du lieu");
+    }
+
+    const deleteData= (id) => {
+      var connectData = firebase.database().ref('post');
+      connectData.child(id).remove();
+      console.log("ban vua xoa thanh cong");
+    }
+    
     return (
+      
         <div className="forum-page" id="forum">
-            <div className="container main-content">
-             <div className="row">
+          <div className="container main-content">
+            <div className="row">
               <div className="col left-sidebar">
                 <div className="card">
                   <table className="table stories-list">
@@ -15,21 +56,27 @@ function PostList() {
                         <th scope="col">Người Đăng</th>
                         <th scope="col">Bình Luận</th>
                         <th scope="col">Xem</th>
-                        <th scope="col"><i class="far fa-calendar-alt" data-toggle="tooltip" title data-original-title="Cập nhật gần đây" /></th>
+                        <th scope="col"><i className="far fa-calendar-alt" data-toggle="tooltip" title data-original-title="Cập nhật gần đây" /></th>
                       </tr>
                     </thead>
                     <Post />
                     <Post />
                   </table>
                 </div>
+                
+                <div className="mt-2">
+                    {/* <button onClick={pushData} type="button" className="btn btn-primary">Thêm</button>
+                  <button onClick={()=>deleteData("-MVEki7eUuDEVRCFQDmT")} type="button" className="btn btn-primary">Xóa</button> */}
+                    <div onClick={changeEditPost} className="">.</div>
+                </div>
               </div>
-
+        
               <div className="col-md-4 center-col">
                 <div className="card mb-3">
                   <div className="card-body">
                     <div className="icon-forum pb-3">
                       {/* <i class="fas fa-users" style={{fontSize: '48px', float: 'left', color: '#919191'}}></i> */}
-                      <i class="fas fa-users" style={{fontSize: '48px', color: '#313131'}}></i>
+                      <i className="fas fa-users" style={{fontSize: '48px', color: '#313131'}}></i>
                     </div>
                     <p className="small">Chào mừng bạn đến với Diễn Đàn Du Lịch TL - Nơi dành cho tất cả mọi người thảo luận về mọi vấn đề xung quanh địa điểm du lịch thú vị, những chuyến đi,
                       và mọi thứ xung quanh sở thích cũng như trải nghiệm du lịch của chính bạn.</p>
@@ -40,53 +87,58 @@ function PostList() {
                     </div>
                   </div>
                 </div>
-                
+
+                {editPost? <EditPost changeEditPost={changeEditPost} />: null}
+                {/* {isShowEditPost()} */}
+
                 <div id="accordianId" className="mb-2" role="tablist" aria-multiselectable="true">
-                  <div class="card">
-                    <div class="card-header" role="tab" id="section1HeaderId">
-                      <h5 class="mb-0">
+                  <div className="card">
+                    <div className="card-header" role="tab" id="section1HeaderId">
+                      <h5 className="mb-0">
                         <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId" aria-expanded="true" aria-controls="section1ContentId">
                           Hỏi Đáp Du Lịch
                         </a>
                       </h5>
                     </div>
-                    <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
-                      <div class="card-body">
-                        Section 1 content
+                    <div id="section1ContentId" className="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+                      <div className="card-body">
+                        231199 bài viết
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="section2HeaderId">
-                      <h5 class="mb-0">
+
+                  <div className="card">
+                    <div className="card-header" role="tab" id="section2HeaderId">
+                      <h5 className="mb-0">
                         <a data-toggle="collapse" data-parent="#accordianId" href="#section2ContentId" aria-expanded="true" aria-controls="section2ContentId">
                           Tìm Kiếm Tour
                         </a>
                       </h5>
                     </div>
-                    <div id="section2ContentId" class="collapse in" role="tabpanel" aria-labelledby="section2HeaderId">
-                      <div class="card-body">
-                        Section 2 content
+                    <div id="section2ContentId" className="collapse in" role="tabpanel" aria-labelledby="section2HeaderId">
+                      <div className="card-body">
+                        13284 bài viết
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="section2HeaderId">
-                      <h5 class="mb-0">
+
+                  <div className="card">
+                    <div className="card-header" role="tab" id="section2HeaderId">
+                      <h5 className="mb-0">
                         <a data-toggle="collapse" data-parent="#accordianId" href="#section3ContentId" aria-expanded="true" aria-controls="section3ContentId">
-                          Đánh giá chuyến đi
+                          Đánh Giá Chuyến Đi
                         </a>
                       </h5>
                     </div>
-                    <div id="section3ContentId" class="collapse in" role="tabpanel" aria-labelledby="section3HeaderId">
-                      <div class="card-body">
-                        Section 3 content
+                    <div id="section3ContentId" className="collapse in" role="tabpanel" aria-labelledby="section3HeaderId">
+                      <div className="card-body">
+                        251 bài viết
                       </div>
                     </div>
                   </div>
+
+                  
                 </div>
-
-
 
                 <ul className="list-group mb-3 category-sidebar">
                   <li className="list-group-item ">
@@ -101,13 +153,13 @@ function PostList() {
                         <span className="color mr-1" style={{backgroundColor: '#4a68b7'}} />
                         <span className="name"><span>Chuyến đi gia đình</span> <small>x 9,897</small></span>
                       </a></h3>
-                    <div className="badge-desc text-gray">fsdf</div>
+                    <div className="badge-desc text-gray">lorem</div>
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
+      </div>
         
     )
 }

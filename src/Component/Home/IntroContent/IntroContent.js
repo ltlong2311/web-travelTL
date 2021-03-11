@@ -15,38 +15,16 @@ export default class Body extends Component {
                   <hr />
                 </div>
                 <div className="row">
-                <div className="col-lg-4 slide">
-                
-                    <slider>
-                      <slide><p>1</p></slide>
-                      <slide><p>2</p></slide>
-                      <slide><p>3</p></slide>
-                      <slide><p>4</p></slide>
-                      <slide><p>5</p></slide>
-                    </slider>
+                <div className="col-lg-4 slideL">
+                    <div className="slider">
+                      <div className="slide"><p>1</p></div>
+                      <div className="slide"><p>2</p></div>
+                      <div className="slide"><p>3</p></div>
+                      <div className="slide"><p>4</p></div>
+                      <div className="slide"><p>5</p></div>
+                    </div>
                 
                 </div>
-                  {/* <div className="col-lg-4 my-auto">
-                    
-                    <div className="device-container">
-                      
-                      <div className="device-mockup iphone6_plus portrait white">
-                        <div className="device">
-                          <div className="screen">
-                            <img
-                              src="https://wiki.matbao.net/wp-content/uploads/2020/01/rss-la-gi-cach-su-dung-the-nao-04.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </div>
-                          <div className="button">
-                          
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
-
                   <div className="col-lg-8 my-auto">
                     <div className="container-fluid">
                       <div className="row">

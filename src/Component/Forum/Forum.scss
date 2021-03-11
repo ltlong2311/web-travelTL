@@ -26,7 +26,13 @@ $text-sub-color: #919191;
             font-size: 12px;
         }
     }
-    
+    .stories-list thead>tr>th {
+        color: #444;
+        font-size: 16px;
+        /* color: #919191; */
+        font-weight: 500;
+        white-space: nowrap;
+    }
 }
 
 .forum-page .story-item .story-meta>a, .forum-page .story-item .story-meta>span, .forum-page .story-item .story-meta>time, .forum-page .story-item .user-item>span {
@@ -38,31 +44,29 @@ a, a:hover {
     text-decoration: none;
 }
 
-.forum-page .stories-list .story-item .story-title{
-    color: rgb(23,96,147);
-    font-size: 16px;
-    /* color: #919191; */
-    font-weight: 600;
-}
-.forum-page .stories-list .story-item .story-title:hover{
-    color: rgba(23, 95, 147, 0.842);
-}
-.forum-page .stories-list .story-item .five-users .user-item{
-    display: inline-block;
-}
-.forum-page .stories-list .story-item .five-users .user-item span{
-    display: inline-block;
+.forum-page .stories-list .story-item {
+    .story-title{
+        color: rgb(23,96,147);
+        font-size: 16px;
+        /* color: #919191; */
+        font-weight: 600;
+    }
+    .story-title:hover{
+        color: rgba(23, 95, 147, 0.842);
+    }
+    .five-users {
+        .user-item{
+            display: inline-block;
+            span{
+                display: inline-block;
+            }
+            img{
+                border-radius: 50%;
+                vertical-align: text-top;
+                padding-bottom: 0px;
+            }
+        }
+    }
 }
 
-.forum-page .stories-list .story-item .five-users .user-item img{
-    border-radius: 50%;
-    vertical-align: text-top;
-    padding-bottom: 0px;
-}
-.forum-page .stories-list thead>tr>th {
-    color: #444;
-    font-size: 16px;
-    /* color: #919191; */
-    font-weight: 500;
-    white-space: nowrap;
-}
+

@@ -16,13 +16,6 @@ function App() {
       <div className="App">
         <Nav />
         <RouterURL />
-        {/* <div className="container">
-          <div className="row mt-2">
-            <News />
-            <News />
-            <News />
-          </div>  
-        </div> */}
         <Footer />
       </div>
     </Router>

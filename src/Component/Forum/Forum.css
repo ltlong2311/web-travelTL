@@ -52,6 +52,8 @@ a, a:hover {
     border-radius: 50%;
     vertical-align: text-top;
     padding-bottom: 0px;
+    width: 20px;
+    height: 20px;
 }
 .forum-page .stories-list thead>tr>th {
     color: #444;
@@ -59,4 +61,17 @@ a, a:hover {
     /* color: #919191; */
     font-weight: 500;
     white-space: nowrap;
+}
+.create-form{
+    background-color: #e6ecf0;
+    position: relative;
+    z-index: 998;
+}
+
+.the-new-forum .media-body{
+    text-align: left;
+}
+.create-form .main-content{
+    padding-top: 24px;
+    padding-bottom: 80px;
 }

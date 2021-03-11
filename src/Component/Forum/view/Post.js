@@ -22,13 +22,13 @@ function Post() {
                 <span type="button" className="btn-nude mr-1">
                     <span className="topic-emo sm F" />
                     <span className="num-liked">4</span>
-                    <i class="fas fa-star pl-1" style={{color:"#f7ca18"}}></i>
+                    <i className="fas fa-star pl-1" style={{color:"#f7ca18"}}></i>
                 </span>
 
                 <span type="button" className="btn-nude mr-1">
                     <span className="topic-emo sm L" />
                     <span className="num-liked">2</span>
-                    <i class="fas fa-heart pl-1" style={{color:"#f22613"}}></i>
+                    <i className="fas fa-heart pl-1" style={{color:"#f22613"}}></i>
                 </span>
                 
                 </div>
@@ -37,10 +37,9 @@ function Post() {
                 <div className="five-users">
                 <a href="/TL/" className="user-item" data-toggle="tooltip" title data-original-title="TL">
                     <span>
-                        <img data-src="https://media.truyenyy.vip/profile/2021-02/thumb_1df3d3e874_20x20.jpg" alt="TL" className=" lazyloaded" title="Travel TL" src="https://media.truyenyy.vip/profile/2021-02/thumb_1df3d3e874_20x20.jpg" /> Travel TL
+                        <img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" alt="TL" className=" lazyloaded" title="Travel TL" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" /> Travel TL
                     </span>
-                </a>
-                
+                </a>                
                 </div>
             </td>
             <td><span className="small text-muted">14</span></td>

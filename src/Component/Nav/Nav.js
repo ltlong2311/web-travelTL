@@ -29,7 +29,7 @@ export default function Nav() {
     <nav
       className={
         navbar
-          ? "navbar navbar-expand-lg navbar-light fixed-top navbar-shrink stick-top"
+          ? "navbar navbar-expand-lg navbar-light fixed-top stick-top navbar-shrink"
           : "navbar navbar-expand-lg navbar-light fixed-top stick-top"
       }
       id="mainNav"

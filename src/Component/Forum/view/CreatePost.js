@@ -31,6 +31,15 @@ function CreatePost(props) {
     console.log(newPost);
   }
 
+  let time = new Date().toLocaleTimeString();
+  const [ctime, setCtime] = useState(time);
+  const UpdateTime = () => {
+    time = new Date().toLocaleTimeString();
+    setCtime(time);
+  };
+  setInterval(UpdateTime, 1000);
+  console.log(ctime);
+
   return (
     <div className="create-form" id="create">
         <div className="container main-content pb-3" >

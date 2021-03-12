@@ -5,7 +5,6 @@ import NavForum from './view/NavForum'
 import CreatePost from './view/CreatePost';
 import './Forum.css'
 
-import {firebaseConnect} from '../../firebaseConnect' 
 import firebase from 'firebase';
 
 // import firebase from 'firebase/app';
@@ -24,7 +23,6 @@ const addData = (newPost) => {
   connectData.push(newPost);
 }
 
-console.log(firebaseConnect);
 function Forum() {
     return (  
       <Router>  

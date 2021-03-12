@@ -12,16 +12,15 @@ import Subscribe from './Subscribe/Subscribe';
 
 function Home() {
     const [count, setCount] = useState(0);
-    const images = ['img/bg.jpg','img/vietnam.jpg', 'img/thailand.jpg','img/japan.jpg','img/china3.jpg', 'img/vietnam2.jpg','img/bg-1.jpg','img/bg-2.jpg','img/bg-3.jpg','img/bg-4.jpg','img/bg-5.jpg','img/bg-6.jpg'];
+    const images = ['img/bg.jpg','img/vietnam.jpg','img/bg-1.jpg', 'img/thailand.jpg','img/bg-2.jpg','img/japan.jpg', 'img/vietnam2.jpg','img/bg-3.jpg','img/bg-4.jpg','img/bg-5.jpg','img/bg-6.jpg','img/bg-7.jpg','img/bg-8.jpg'];
     
 
     const changeImg = () => {
         if( count < images.length -1 ){
             setCount(count + 1);
-            console.log(count);
+            // console.log(count);
         }else {
             setCount(0);
-            console.log(count);
         }
     }
     // useEffect(changeImg);

@@ -13,19 +13,21 @@ const firebaseConfig = {
 };
 
 
-export const firebaseConnect = firebase.initializeApp(firebaseConfig);
+export const FireBase = firebase.initializeApp(firebaseConfig);
 
-var data = firebase.database().ref('post/');
-data.once('value').then(function(snapshot){
-    console.log(snapshot);
-    console.log(snapshot.val());
+export const dataFirebase = firebase.database().ref('post/');
+
+
+dataFirebase.once('value').then(function(snapshot){
+    // console.log(snapshot);
+    // console.log(snapshot.val());
 })
 
-var data1 = firebase.database().ref('post/post2');
-data1.set({
-    id: 456,
-    title: "Review về tour Malaysia!",
-    category: "Bàn luận chuyến đi",
-    postDate: "02:21 26/02/2021 GMT+7",
-    poster: "Travel TL"
-})
+// var data1 = firebase.database().ref('post/post2');
+// data1.set({
+//     id: 456,
+//     title: "Review về tour Malaysia!",
+//     category: "Bàn luận chuyến đi",
+//     postDate: "02:21 26/02/2021 GMT+7",
+//     poster: "Travel TL"
+// })

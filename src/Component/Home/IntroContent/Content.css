@@ -34,14 +34,14 @@ section.features .section-heading h2 {
 
 @media (max-width: 992px){
     section.features .feature-item{
-        margin-top: 15px;
+      margin-top: 15px;
     }
     
 }
 
 @media (min-width:992px){
     section.features .device-container{
-        margin-bottom:0;
+       margin-bottom:0;
     }
 }
 .slideL{
@@ -64,6 +64,10 @@ section.features .section-heading h2 {
     position: absolute;
     left: 0;
     animation: slide 20s infinite;
+}
+.slideL:hover {
+  transform: scale(1.08);
+  cursor: move;
 }
 .slider > * {
     position: relative;

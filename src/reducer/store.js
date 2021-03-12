@@ -1,4 +1,5 @@
-// import data from '../firebaseConnect'
+import {dataFireBase} from '../firebaseConnect';
+import firebase from 'firebase';
 
 var redux = require('redux');
 
@@ -9,7 +10,9 @@ const postInitialState = {
 const allReducer = (state = postInitialState, action) => {
     switch (action.type) {
         case "ADD_DATA":
-            console.log("connect success");
+            var pushData = firebase.database().ref('post');
+            pushData.push(action.newPost);
+            console.log("connect success ");
             return state
         default:
             return state

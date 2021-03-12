@@ -13,10 +13,7 @@ function Post() {
                 <span className="mx-1">·</span>
                 <time dateTime="" className="timeago">2h</time>
                 <span style={{flex: 1}} />
-                {/* <a href="/dien-dan/hoi-dap-gop-y/" className="category-badge">
-                    <span className="name mr-1">Hỏi Đáp - Góp Ý</span>
-                    <span className="color" style={{backgroundColor: '#df7e0a'}} />
-                </a> */}
+                
                 </div>
                 <div className="story-react">
                 <span type="button" className="btn-nude mr-1">
@@ -35,7 +32,7 @@ function Post() {
             </td>
             <td>
                 <div className="five-users">
-                <a href="/TL/" className="user-item" data-toggle="tooltip" title data-original-title="TL">
+                <a href="/TL/" className="user-item" data-toggle="tooltip" title="" data-original-title="TL">
                     <span>
                         <img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" alt="TL" className=" lazyloaded" title="Travel TL" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" /> Travel TL
                     </span>

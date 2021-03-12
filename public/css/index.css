@@ -157,7 +157,7 @@ section.cta {
   position: relative;
   z-index: 999;
   padding: 50px 0;
-  background-image: url(../img/bg-cta.jpg);
+  background-image: url(../img/bg-9.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -558,10 +558,7 @@ section h2 {
     display: none;
   } */
  
-  .slide:hover {
-    transform: scale(1.08);
-    cursor: move;
-  }
+  
   .navbar ul > li .sub-menu li.nav-icon {
     padding: 10px 10px 10px 35px;
   }

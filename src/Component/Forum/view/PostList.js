@@ -10,7 +10,7 @@ import EditPost from './EditPost';
 function PostList(props) {
   
   const [editPost, setEditPost] = useState(false);
-  const [dataPost, setDataPost] = useState([]);
+  const [dataPost, setDataPost] = useState();
   
 
   useEffect( () => {
@@ -21,21 +21,36 @@ function PostList(props) {
         const title = element.val().title;
         const category = element.val().category;
         const content = element.val().content;
+        const poster = element.val().poster;
+        const posterImg = element.val().posterImg;
         arrayData.push({
           key: key,
           title: title,
           category: category,
-          content: content
+          content: content,
+          poster: poster,
+          posterImg: posterImg 
         });
-        setDataPost(arrayData);
       });
+      setDataPost(arrayData);
     });
   }, []);
 
   
   const getData = () => {
     if(dataPost){
-      console.log(dataPost);
+      return dataPost.map((value, key) => {
+        return (
+          <Post
+          key={key}
+          title={value.title}
+          category={value.category}
+          content={value.content}
+          poster={value.poster}
+          posterImg={value.posterImg}
+          />
+        )
+      })
     }
   }
 
@@ -85,19 +100,17 @@ function PostList(props) {
                       <th scope="col">Người Đăng</th>
                       <th scope="col">Bình Luận</th>
                       <th scope="col">Xem</th>
-                      <th scope="col"><i className="far fa-calendar-alt" data-toggle="tooltip" title="" data-original-title="Cập nhật gần đây" /></th>
+                      <th scope="col"><i className="far fa-clock" data-toggle="tooltip" title="" data-original-title="Cập nhật gần đây" /></th>
                     </tr>
                   </thead>
                   {getData()}
-                  <Post />
-                  <Post />
                 </table>
               </div>
               
               <div className="mt-2">
                   {/* <button onClick={pushData} type="button" className="btn btn-primary">Thêm</button>
                 <button onClick={()=>deleteData("-MVEki7eUuDEVRCFQDmT")} type="button" className="btn btn-primary">Xóa</button> */}
-                  <div onClick={changeEditPost} className="">.</div>
+                  <div onClick={changeEditPost} className="btn btn-info">+ <small> Thêm nhanh</small></div>
               </div>
             </div>
       

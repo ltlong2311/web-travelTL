@@ -37,6 +37,6 @@
   }
 }
 footer{
-  position: relative;
+  position: relative!important;
   z-index: 999;
 }

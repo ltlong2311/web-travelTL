@@ -104,6 +104,11 @@ ul{
   }
   
 }
+@media (min-width: 1021px){
+  .ml-header {
+    margin-left: 30px!important;
+  }
+}
 
 @media (min-width: 991px){
   #mainNav .navbar-nav>li>a{
@@ -184,7 +189,7 @@ ul{
       background-color: transparent;
   }
   .ml-header {
-    margin-left: 30px;
+    margin-left: 3px;
   }
   .navbar ul > li .sub-menu a{
     text-align: left;

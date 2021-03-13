@@ -20,6 +20,12 @@ body {
   font-family: Muli, Helvetica, Arial, sans-serif;
 }
 
+blockquote {
+  max-width: 1050px;
+  padding-top: 10px;
+  margin: auto;
+  text-align: center;
+}
 a {
   color: #283049;
   transition: all 0.35s;

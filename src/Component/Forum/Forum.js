@@ -17,6 +17,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import MyPost from './view/MyPost';
 
 const addData = (newPost) => {
   var connectData = firebase.database().ref('post');
@@ -39,6 +40,9 @@ function Forum() {
             </Route>
             <Route path="/create">
               <CreatePost getData={(newPost) => addData(newPost)}/>
+            </Route>
+            <Route exact path="/my-post">
+              <MyPost />
             </Route>
           </Switch>
           

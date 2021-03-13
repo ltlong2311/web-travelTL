@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Post from './Post'
 import { dataFirebase } from '../../../firebaseConnect' 
-import firebase from 'firebase';
-import EditPost from './EditPost';
 // import { element } from 'prop-types';
 
 
 
 function PostList(props) {
   
-  const [editPost, setEditPost] = useState(false);
+  // const [quickPost, setQuickPost] = useState(false);
   const [dataPost, setDataPost] = useState();
   
 
@@ -54,18 +52,18 @@ function PostList(props) {
     }
   }
 
-  const changeEditPost = () => {
-    setEditPost(!editPost);
-  }
+  // const changeQuickPost = () => {
+  //   setQuickPost(!quickPost);
+  // }
   
   // useEffect( () => {
-  //   console.log(editPost);
-  // }, [editPost]);
+  //   console.log(quickPost);
+  // }, [quickPost]);
 
 
-  // const isShowEditPost = () => {
-  //   if(editPost === true){
-  //     return <EditPost />
+  // const isShowQuickPost = () => {
+  //   if(quickPost === true){
+  //     return <QuickPost />
   //   }
   // }
   
@@ -107,14 +105,15 @@ function PostList(props) {
                 </table>
               </div>
               
-              <div className="mt-2">
+              <div className="mt-2 mb-3">
                   {/* <button onClick={pushData} type="button" className="btn btn-primary">Thêm</button>
                 <button onClick={()=>deleteData("-MVEki7eUuDEVRCFQDmT")} type="button" className="btn btn-primary">Xóa</button> */}
-                  <div onClick={changeEditPost} className="btn btn-info">+ <small> Thêm nhanh</small></div>
+                  {/* <div onClick={changeQuickPost} className="btn btn-info">+ <small> Thêm nhanh</small></div> */}
               </div>
+              {/* {quickPost? <QuickPost changeQuickPost={changeQuickPost} />: null} */}
             </div>
-      
-            <div className="col-md-4 center-col">
+           
+            <div className="forum-content col-md-4 center-col">
               <div className="card mb-3">
                 <div className="card-body">
                   <div className="icon-forum pb-3">
@@ -131,8 +130,8 @@ function PostList(props) {
                 </div>
               </div>
 
-              {editPost? <EditPost changeEditPost={changeEditPost} />: null}
-              {/* {isShowEditPost()} */}
+              
+              {/* {isShowQuickPost()} */}
 
               <div id="accordianId" className="mb-2" role="tablist" aria-multiselectable="true">
                 <div className="card">

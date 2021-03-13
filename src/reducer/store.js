@@ -5,7 +5,8 @@ var redux = require('redux');
 
 
 const postInitialState = {
-    title: 'test'
+    title: 'test',
+    isEdit: false
 }
 const allReducer = (state = postInitialState, action) => {
     switch (action.type) {
@@ -14,6 +15,11 @@ const allReducer = (state = postInitialState, action) => {
             pushData.push(action.newPost);
             console.log("connect success ");
             return state
+
+        case "CHANGE_EDIT_POST":
+            
+            return {...state, isEdit:!state.isEdit}
+
         default:
             return state
     }

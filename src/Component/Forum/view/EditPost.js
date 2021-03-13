@@ -25,15 +25,30 @@ function EditPost(props) {
     
     return (
         <div className="form-edit mb-3">
-            <h3>Đăng Nhanh</h3>
+            <h3>Sửa bài đăng</h3>
             <div className="form-group">
                 <form>
-                  <small id="helpId" className="form-text text-muted">Tiêu Đề</small>
-                  <input type="text" onChange={(e)=>isChangeTitle(e)} className="form-control" name="postTitle" aria-describedby="helpId" placeholder="" />
-                  <small id="helpId" className="form-text text-muted">Nội dung</small>
-                  <textarea name="postContent" onChange={(e)=>isChangeContent(e)} className="form-control" id="exampleFormControlTextarea1" rows="2" />
+                  <label className="form-text">Tiêu đề</label>
+                  <input type="text" className="form-control" name="postTitle" aria-describedby="helpId" placeholder="" />
+                  <label htmlFor="exampleSelect" className>Loại tin</label>
+                  <select
+                    
+                    name="postCategory"
+                    id="categorySelect"
+                    tabIndex={3}
+                    className="form-control"
+                  >
+                    <option value={0}>----</option>
+                    <option>Hỏi Đáp Du Lịch</option>
+                    <option>Hướng Dẫn Du Lịch</option>
+                    <option>Nhận Xét Chuyến Đi</option>
+                    <option>Giới Thiệu Điểm Đến</option>
+                    <option>Phản Ánh Vấn Đề</option>
+                  </select>
+                  <label className="form-text">Nội dung</label>
+                  <textarea name="postContent" className="form-control" id="exampleFormControlTextarea1" rows="2" />
                   <button className="btn btn-success mt-2" type="reset" onClick={addDataPost}>Lưu</button>
-                  <button className="btn btn-warning mt-2 ml-1" onClick={props.changeEditPost}>Đóng</button>
+                  <button className="btn btn-warning mt-2 ml-1" onClick={() =>props.changeEditPost()}>Đóng</button>
                 </form>
             </div>
         </div>
@@ -44,15 +59,19 @@ function EditPost(props) {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    test: state.testConnect
+    test: state.testConnect,
+    isEdit: state.isEdit
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    addDataStore: (newPost) => {
-      dispatch({type:"ADD_DATA", newPost})
+    changeEditPost: () => {
+      dispatch({
+          type: "CHANGE_EDIT_POST"
+      })
     }
   }
 }
+
+
 export default connect(mapStateToProps, mapDispatchToProps)(EditPost);
-// export default EditPost;

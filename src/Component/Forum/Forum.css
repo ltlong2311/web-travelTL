@@ -75,3 +75,48 @@ a, a:hover {
     padding-top: 24px;
     padding-bottom: 80px;
 }
+
+#forum .icon-edit{
+    display: none;
+}
+
+.icon-edit{
+    color:#b6b6b6;
+    font-size: 14px;
+}
+.icon-edit:hover{
+    color:#9c9c9c;
+    cursor: pointer;
+}
+
+
+#forum .icon-delete{
+    display: none;
+}
+
+.icon-delete{
+    color:#f1a9a0;
+    font-size: 14px;
+}
+.icon-delete:hover{
+    color:#e08283;
+    cursor: pointer;
+}
+
+/* @media (min-width: 992px){
+    .navbar-expand-sm .navbar-toggler {
+        display: none;
+    }
+} */
+/* 
+@media (min-width: 992px){
+    .d-lg-none {
+        display: none!important;
+    }
+
+} */
+@media (max-width: 767px){
+   #forum .forum-content{
+       display: none;
+   }
+}

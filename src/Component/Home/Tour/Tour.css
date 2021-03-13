@@ -149,6 +149,22 @@
     color: #fff;
     background-color: #80b157!important;
 }
+#view-news-list a {
+    background: 0 0!important;
+    border: 1px solid #959899;
+    border-radius: 4px;
+    color: #3e4547;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 3px 35px;
+    text-decoration: none;
+    transition: 0.4s ease all;
+    font-family: 'Muli', sans-serif;
+}
+#view-news-list a:hover{
+    color: rgb(255, 255, 255);
+    background-color: #3cce74!important;
+}
 /* 
 .desc, .desc_2 {
     position: absolute;

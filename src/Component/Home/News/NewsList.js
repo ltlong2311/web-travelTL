@@ -44,6 +44,11 @@ export default function NewPage() {
                     </div>
                 </div>
             </div>
+            <div className="col">
+                <div id="view-news-list" className="mg-top-40">
+                    <a href="news.html" className="btn-view-more">Xem thêm</a>
+                </div>
+            </div>
         </section>
        
     )

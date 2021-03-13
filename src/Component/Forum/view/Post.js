@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 function Post(props) {
     return (
@@ -6,14 +7,15 @@ function Post(props) {
             <tr className="story-item">
             <td>
                 <a href=" #" className="story-title">
-                    {props.title}
+                    {props.title} 
                 </a>
+                <i onClick={() =>props.changeEditPost()} className="fas fa-pen ml-2 icon-edit"></i>
+                <i className="fas fa-trash-alt ml-1 icon-delete"></i>
                 <div className="story-meta">
-                <a href=" #">{props.category}</a>
-                <span className="mx-1">·</span>
-                <time dateTime="" className="timeago">2h</time>
-                <span style={{flex: 1}} />
-                
+                    <a href=" #">{props.category}</a>
+                    <span className="mx-1">·</span>
+                    <time dateTime="" className="timeago">2h</time>
+                    <span style={{flex: 1}} />
                 </div>
                 <div className="story-react">
                 <span type="button" className="btn-nude mr-1">
@@ -47,4 +49,19 @@ function Post(props) {
     )
 }
 
-export default Post
+const mapStateToProps = (state, ownProps) => {
+    return {
+        isEdit: state.isEdit
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        changeEditPost: () => {
+            dispatch({
+                type: "CHANGE_EDIT_POST"
+            })
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Post)

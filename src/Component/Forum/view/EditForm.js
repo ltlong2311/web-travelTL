@@ -37,7 +37,7 @@ function EditPost(props) {
       // dataPostChanged.id= props.editPost.id;
       props.addEditData(dataPostChanged); // truyen vao store
       console.log("Thay đổi thành công " + JSON.stringify(dataPostChanged));
-      // props.changeEditPost();
+      props.changeEditPost(); // dong postForm
     }
 
 

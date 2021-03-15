@@ -31,7 +31,12 @@ const allReducer = (state = postInitialState, action) => {
             })
             console.log("dữ liệu thay đổi" + JSON.stringify(action.dataPostChanged));
             return {...state, editPost:{}}
-        
+
+        case "DELETE_POST":
+            dataFirebase.child(action.idPostDelete).remove();
+            console.log("id" + action.idPostDelete);
+            return {...state, editPost:{}}
+            
         default:
             return state
     }

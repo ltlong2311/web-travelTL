@@ -3,10 +3,16 @@ import {connect} from 'react-redux'
 
 function Post(props) {
     const actionEdit = () => {
-        props.changeEditPost(); // hien thi form edit
+        props.changeEditPost(); 
         // console.log(props.postInfo);
         props.editPost(props.postInfo);  // truyen postInfo -> postEditInfo
     }
+
+    const actionDelete = () => {
+        console.log(props.postInfo);
+        props.deletePost(props.postInfo.id); 
+    }
+
     return (
         <tbody>
             <tr className="story-item">
@@ -15,7 +21,7 @@ function Post(props) {
                     {props.title} 
                 </a>
                 <i onClick={actionEdit} className="fas fa-pen ml-2 icon-edit"></i>
-                <i className="fas fa-trash-alt ml-1 icon-delete"></i>
+                <i onClick={actionDelete} className="fas fa-trash-alt ml-1 icon-delete"></i>
                 <div className="story-meta">
                     <a href=" #">{props.category}</a>
                     <span className="mx-1">·</span>
@@ -71,6 +77,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch({
                 type: "GET_EDIT_POST",
                 postEditInfo
+            })
+        },
+        deletePost: (idPostDelete) => {
+            dispatch({
+                type: "DELETE_POST",
+                idPostDelete
             })
         }
     }

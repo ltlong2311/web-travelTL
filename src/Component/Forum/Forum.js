@@ -32,16 +32,16 @@ function Forum() {
           
           <NavForum />
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/forum">
               <PostList />
             </Route>
             <Route exact path="/forum">
               <PostList />
             </Route>
-            <Route path="/create">
+            <Route path="/forum/create">
               <CreatePost getData={(newPost) => addData(newPost)}/>
             </Route>
-            <Route exact path="/my-post">
+            <Route path="/forum/my-post">
               <MyPost />
             </Route>
           </Switch>

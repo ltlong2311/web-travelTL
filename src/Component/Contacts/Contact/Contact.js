@@ -96,8 +96,8 @@ export default class Contact extends Component {
                           </div>
                           <div className="control-group">
                             <div className="form-group floating-label-form-group controls mb-0 pb-2">
-                              <div class="form-group">
-                                <label for=""></label>
+                              <div className="form-group">
+                                <label></label>
                                 <input onChange={(event) => this.isFileChange(event)} type="file" className="form-control-file" name="fFile" id="" placeholder="" aria-describedby="fileHelpId" />
                               </div>
                               <p className="help-block text-danger" />

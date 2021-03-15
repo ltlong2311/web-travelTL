@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Post from './Post'
 import { dataFirebase } from '../../../firebaseConnect' 
 import QuickPost from './QuickPost';
-import EditPost from './EditPost';
+import EditForm from './EditForm';
 import { connect } from 'react-redux'
 
 function MyPost(props) {
@@ -22,7 +22,7 @@ function MyPost(props) {
             const poster = element.val().poster;
             const posterImg = element.val().posterImg;
             arrayData.push({
-            key: key,
+            id: key,
             title: title,
             category: category,
             content: content,
@@ -37,17 +37,21 @@ function MyPost(props) {
     
     const getData = () => {
         if(dataPost){
-        return dataPost.map((value, key) => {
-            return (
-            <Post
-            key={key}
-            title={value.title}
-            category={value.category}
-            content={value.content}
-            poster={value.poster}
-            posterImg={value.posterImg}
-            />
-            )
+        return dataPost.map((value, key) => { 
+          // console.log(dataPost);
+          // console.log(value.id); // push id=key
+          return (
+          <Post
+          key={key}
+          id={key}
+          postInfo={value}
+          title={value.title}
+          category={value.category}
+          content={value.content}
+          poster={value.poster}
+          posterImg={value.posterImg}
+          />
+          )
         })
         }
     }
@@ -57,7 +61,7 @@ function MyPost(props) {
     }
     const showEditForm = () => {
       if(props.isEdit){
-        return <EditPost changeEditPost={changeEditPost} />
+        return <EditForm changeEditPost={changeEditPost} />
       }
     }
 

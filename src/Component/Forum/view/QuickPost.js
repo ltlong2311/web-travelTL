@@ -17,6 +17,8 @@ function QuickPost(props) {
       newPost.title = postTitle;
       newPost.category = '--';
       newPost.content = postContent;
+      newPost.posterImg = 'https://static.yeah1.com/uploads/editors/27/2020/03/21/JaZBMzV14fzRI4vBWG8jymplSUGSGgimkqtJakOV.jpeg';
+      newPost.poster = 'Ẩn danh';
       // newPost = JSON.stringify(newPost);
       // props.getData(newPost);
       props.addDataStore(newPost);

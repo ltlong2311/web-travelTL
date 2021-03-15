@@ -1,11 +1,4 @@
-// import {
-//     // BrowserRouter as Router,
-//     // Switch,
-//     // Route,
-//     Link,
-
-//     NavLink
-// } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 // import ScrollspyNav from "react-scrollspy-nav";
 import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
@@ -63,6 +56,7 @@ export default function Nav() {
                 smooth to="/#destination"
                 className="nav-link js-scroll-trigger"
                 data-target="#destination" 
+                offset={70}
               >
                 ĐIỂM ĐẾN
               </Link>
@@ -110,9 +104,11 @@ export default function Nav() {
                 smooth to="/#subscribe"
                 data-target="#subscribe"
                 className="nav-link js-scroll-trigger"
+                offset={70}
               >
                 THEO DÕI
               </Link>
+              
             </li>
             
             
@@ -135,7 +131,7 @@ export default function Nav() {
               <Link
                 to="/forum"
                 className="nav-link js-scroll-trigger"
-                data-target="#"
+                data-target="#forum"
               >
                 <i className="fas fa-users"></i>DIỄN ĐÀN
               </Link>

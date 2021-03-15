@@ -21,10 +21,10 @@ function NavForum() {
                             <Link className="nav-link" to="/forum/" href="/most-views">Nhiều lượt xem</Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to="" id="dropdownId" data-toggle="dropdown" aria-expanded="false">Bài của tôi</Link>
+                            <Link className="nav-link dropdown-toggle" to="/forum/" id="dropdownId" data-toggle="dropdown" aria-expanded="false">Bài của tôi</Link>
                             <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                <Link className="dropdown-item" to="/my-post">Bài đăng của tôi</Link>
-                                <Link className="dropdown-item" to="/forum">Bài tôi theo dõi</Link>
+                                <Link className="dropdown-item" to="/forum/my-post">Bài đăng của tôi</Link>
+                                <Link className="dropdown-item" to="/forum/">Bài tôi theo dõi</Link>
                             </div>
                         </li>
                     </ul>
@@ -32,7 +32,7 @@ function NavForum() {
                         <input className="col form-control mr-sm-2" type="text" placeholder="Tìm kiếm" />
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><i className="icon-search fas fa-search"></i></button>
                     </form>
-                    <Link to="/create" id="btn-edit" className="btn btn-outline-success my-2 my-sm-0 ml-2" name="editPost" role="button"><i className="fas fa-edit" /></Link>
+                    <Link to="/forum/create" id="btn-edit" className="btn btn-outline-success my-2 my-sm-0 ml-2" name="editPost" role="button"><i className="fas fa-edit" /></Link>
                     </div>
                 </div>
             </nav>

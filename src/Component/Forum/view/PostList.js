@@ -52,32 +52,12 @@ function PostList(props) {
     }
   }
 
-  // const changeQuickPost = () => {
-  //   setQuickPost(!quickPost);
-  // }
-  
-  // useEffect( () => {
-  //   console.log(quickPost);
-  // }, [quickPost]);
-
-
   // const isShowQuickPost = () => {
   //   if(quickPost === true){
   //     return <QuickPost />
   //   }
   // }
   
-  // const pushData= () => {
-  //   var connectData = firebase.database().ref('post');
-  //   connectData.push({
-  //     title: "Những điều cần lưu ý khi đi Nhật",
-  //     category: "Hỏi đáp du lịch",
-  //     postDate: "24:21 26/02/2021 GMT+7",
-  //     poster: "nguoibian1"
-  //   })
-  //   console.log("ban vưa them moi du lieu");
-  // }
-
   // const deleteData= (id) => {
   //   var connectData = firebase.database().ref('post');
   //   connectData.child(id).remove();

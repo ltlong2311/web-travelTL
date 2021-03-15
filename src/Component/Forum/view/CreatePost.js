@@ -64,7 +64,7 @@ function CreatePost(props) {
                       <hr />
                     <form action="/forum">
                       <div className="form-group mt-3">
-                        <label htmlFor="id_title" className>
+                        <label htmlFor="id_title">
                           Tiêu Đề
                         </label>
                         <input
@@ -81,7 +81,7 @@ function CreatePost(props) {
                         </div>
                       </div>
                       <div className="form-group">
-                        <label htmlFor="exampleSelect" className>
+                        <label htmlFor="exampleSelect">
                           Loại Tin
                         </label>
                         <select
@@ -103,10 +103,10 @@ function CreatePost(props) {
                         <label htmlFor="id_content" className>
                           Nội Dung Bài Viết
                         </label>
-                        <textarea name="postContent" onChange={(e)=>isContentChange(e)} class="form-control" id="exampleFormControlTextarea1" rows="15" ></textarea>
+                        <textarea name="postContent" onChange={(e)=>isContentChange(e)} className="form-control" id="exampleFormControlTextarea1" rows="15" ></textarea>
                       </div>
                       <button type="submit" onClick={addDataPost} className="btn btn-primary mt-2">
-                        <i class="fas fa-check"></i> Đăng Bài Ngay
+                        <i className="fas fa-check"></i> Đăng Bài Ngay
                       </button>
                     
                       <a href="/forum/" className="btn btn-secondary mt-2 ml-2">

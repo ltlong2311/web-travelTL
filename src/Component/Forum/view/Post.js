@@ -11,8 +11,11 @@ function Post(props) {
     const actionDelete = () => {
         console.log(props.postInfo);
         props.deletePost(props.postInfo.id); 
+        props.notifyDeletePost(" ✔ Xóa thành công");
     }
-
+    const test = () => {
+        props.notifyDeletePost("test");
+    }
     return (
         <tbody>
             <tr className="story-item">
@@ -32,7 +35,7 @@ function Post(props) {
                 <span type="button" className="btn-nude mr-1">
                     <span className="topic-emo sm F" />
                     <span className="num-liked">5</span>
-                    <i className="fas fa-star pl-1" style={{color:"#f7ca18"}}></i>
+                    <i onClick={test} className="fas fa-star pl-1" style={{color:"#f7ca18"}}></i>
                 </span>
 
                 <span type="button" className="btn-nude mr-1">
@@ -60,13 +63,13 @@ function Post(props) {
     )
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     return {
         isEdit: state.isEdit
     }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         changeEditPost: () => {
             dispatch({
@@ -84,7 +87,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                 type: "DELETE_POST",
                 idPostDelete
             })
+        },
+        notifyDeletePost: (notify) => {
+            dispatch({
+                type: "NOTIFY_SUCCESS",
+                notify
+            })
         }
+        
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Post)

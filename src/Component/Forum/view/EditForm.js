@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {connect} from 'react-redux'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function EditPost(props) {
     
@@ -18,6 +20,8 @@ function EditPost(props) {
       setPostContent(e.target.value);
     }
 
+    const notifyEditSuccess = () => toast.success(" ✔ Sửa bài đăng thành công!");
+
     // useEffect(() => {
     //   if(props.editPost.id){    //ton tai id = da co du lieu, -> Sua ( khac voi them moi k co id ban dau)  
     //     console.log('useEffect has been called!');
@@ -32,14 +36,17 @@ function EditPost(props) {
       dataPostChanged.title = postTitle;
       dataPostChanged.category = postCategory;
       dataPostChanged.content = postContent;
-      // dataPostChanged.poster= props.editPost.poster;  // du lieu nguoi dang, anh, id khong doi
-      // dataPostChanged.posterImg= props.editPost.posterImg;
-      // dataPostChanged.id= props.editPost.id;
-      props.addEditData(dataPostChanged); // truyen vao store
+      dataPostChanged.id= props.editPost.id;
+      props.addEditData(dataPostChanged); 
       console.log("Thay đổi thành công " + JSON.stringify(dataPostChanged));
+      // toast.success("Thay đổi thành công ");
+      props.notifyEditPost(" ✔ Thay đổi thành công")
       props.changeEditPost(); // dong postForm
-    }
 
+    }
+    const click = () => {
+      notifyEditSuccess();
+    }
 
     // console.log(props.editPost);
 
@@ -48,7 +55,7 @@ function EditPost(props) {
             <h3>Sửa bài đăng</h3>
             <div className="form-group">
                 <form>
-                  <label className="form-text">Tiêu đề</label>
+                  <label onClick={click} className="form-text">Tiêu đề</label>
                   <input 
                     type="text" 
                     onChange={(e)=>isChangeTitle(e)} 
@@ -109,6 +116,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     addEditData: (dataPostChanged) => {
       dispatch({type:"EDIT_POST", dataPostChanged})
+    },
+    notifyEditPost: (notify) => {
+      dispatch({
+          type: "NOTIFY_SUCCESS",
+          notify
+      })
     }
   }
 }

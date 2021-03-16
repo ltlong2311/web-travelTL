@@ -1,13 +1,17 @@
 import {dataFirebase} from '../firebaseConnect';
 import firebase from 'firebase';
-
+import { toast } from 'react-toastify';
 var redux = require('redux');
 
 
 const postInitialState = {
     title: 'test',
     isEdit: false,
-    editPost:{}
+    editPost:{},
+    showNotify: false,
+    isNotify: false,
+    notify: "",
+    numNotify: 0,
 }
 const allReducer = (state = postInitialState, action) => {
     switch (action.type) {
@@ -36,7 +40,13 @@ const allReducer = (state = postInitialState, action) => {
             dataFirebase.child(action.idPostDelete).remove();
             console.log("id" + action.idPostDelete);
             return {...state, editPost:{}}
-            
+        case "NOTIFY_SUCCESS":
+            toast.success(action.notify);
+            return {...state, notify:action.notify}
+        case "NOTIFY_EDIT_POST_SUCCESS":
+            toast.info(" ✔ Sửa thành công");
+            return {...state, notify:action.notifyEdit}
+            // return {...state,isNotify:!state.isNotify, notify:action.notifyEdit}       
         default:
             return state
     }

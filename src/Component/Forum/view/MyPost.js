@@ -5,6 +5,10 @@ import QuickPost from './QuickPost';
 import EditForm from './EditForm';
 import { connect } from 'react-redux'
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 function MyPost(props) {
     const [quickPost, setQuickPost] = useState(false);
     const [editPost, setEditPost] = useState(false);
@@ -69,7 +73,10 @@ function MyPost(props) {
       setQuickPost(!quickPost);
     }
     
-  
+    const notifyEditSuccess = () => toast.info(" ✔ Đã bấm vào tiêu đề!");
+    const notifyDeleteSuccess = () => toast.success(" Xóa bài đăng thành công!");
+    const notifyFall = () => toast.error("Đừng ấn linh tinh!");
+
   return (
       <div className="forum-page" id="my-post">
         <div className="container main-content">
@@ -79,8 +86,8 @@ function MyPost(props) {
                 <table className="table stories-list">
                   <thead>
                     <tr>
-                      <th scope="col">Tiêu Đề</th>
-                      <th scope="col">Người Đăng</th>
+                      <th onClick={notifyEditSuccess} scope="col">Tiêu Đề</th>
+                      <th onClick={notifyFall} scope="col">Người Đăng</th>
                       <th scope="col">Bình Luận</th>
                       <th scope="col">Xem</th>
                       <th scope="col"><i className="far fa-clock" data-toggle="tooltip" title="" data-original-title="Cập nhật gần đây" /></th>
@@ -120,8 +127,7 @@ function MyPost(props) {
               </div>
               <div className="form-edit mt-4">
                 {showEditForm()}
-              </div>
-              
+              </div> 
             </div>
         </div>
       </div>

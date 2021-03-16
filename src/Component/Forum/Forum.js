@@ -18,6 +18,7 @@ import {
   Route
 } from "react-router-dom";
 import MyPost from './view/MyPost';
+import AlertInfo from './view/AlertInfo';
 
 const addData = (newPost) => {
   var connectData = firebase.database().ref('post');
@@ -31,6 +32,7 @@ function Forum() {
           <HeaderVideo title="THẾ GIỚI TL" />
           
           <NavForum />
+          <AlertInfo />
           <Switch>
             <Route exact path="/forum">
               <PostList />

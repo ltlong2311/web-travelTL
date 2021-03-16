@@ -1,5 +1,4 @@
 import "./App.css";
-
 import Footer from "./Component/Footer/Footer";
 import Nav from "./Component/Nav/Nav";
 import RouterURL from "./Router/RouterURL";
@@ -9,8 +8,24 @@ import {
   // Route,
   // Link
 } from "react-router-dom";
+import {connect} from 'react-redux';
 
-function App() {
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+function App(props) {
+ 
+  // useEffect(() => {
+  //   toast.success(props.notify);
+  // }, [props.numNotify]);
+
+  // const notify = () =>{
+  //   if(props.isNotify===true){
+  //    toast.success(props.notify);
+  //   }
+  // }
   return (
     <Router>
       <div className="App">
@@ -18,8 +33,19 @@ function App() {
         <RouterURL />
         <Footer />
       </div>
+      {/* {notify()} */}
+      <ToastContainer position="top-right" autoClose={3000} newestOnTop closeOnClick />
     </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    notify: state.notify,
+    isNotify: state.isNotify,
+    numNotify: state.numNotify
+  }
+}
+
+export default connect(mapStateToProps)(App)
+

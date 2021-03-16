@@ -65,7 +65,6 @@ function PostList(props) {
   // }
   
   return (
-    
       <div className="forum-page" id="forum">
         <div className="container main-content">
           <div className="row">

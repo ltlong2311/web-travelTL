@@ -128,7 +128,7 @@ video {
     /* transform: translateY(-30%); */
     max-width: 300px;
     width: 100%;
-    z-index: 998;
+    z-index: 997;
   }
 }
 @media (min-width: 992px) {

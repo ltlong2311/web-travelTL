@@ -1,10 +1,13 @@
 import React, {useState} from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function CreatePost(props) {
   const [postTitle, setPostTitle] = useState('');
   const [postCategory, setPostCategory] = useState('');
   const [postContent, setPostContent] = useState('');
-  const [postTime, setPostTime] = useState('');
+  // const [postTime, setPostTime] = useState('');
 
   // const isChange = (e) => {
   //   const name = e.target.name;
@@ -12,7 +15,8 @@ function CreatePost(props) {
   //   console.log(name);
   //   console.log(value);
   // }
-  
+  const notify = () => toast.info(" ⛵ Bậc thầy du lịch!");
+
   const isTitleChange = (e) => {
     setPostTitle(e.target.value);
   }
@@ -29,6 +33,7 @@ function CreatePost(props) {
     newPost.content = postContent;
     props.getData(newPost);
     console.log(newPost);
+    notify();
   }
 
   let time = new Date().toLocaleTimeString();
@@ -39,6 +44,8 @@ function CreatePost(props) {
   };
   setInterval(UpdateTime, 1000);
   console.log(ctime);
+
+  
 
   return (
     <div className="create-form" id="create">
@@ -57,7 +64,7 @@ function CreatePost(props) {
                           <a href=" /">
                             <strong style={{ fontSize: "18px" }}>ThanhLong</strong>
                           </a>
-                          <div className="text-muted small">Chuyên gia du lịch</div>
+                          <div onClick={notify} className="text-muted small">Chuyên gia du lịch</div>
                           <div className="text-muted small">19 bài diễn đàn</div>
                         </div>
                       </div>
@@ -119,6 +126,7 @@ function CreatePost(props) {
             </div>
           </div>
         </div>
+        <ToastContainer />
     </div>
     
   );

@@ -74,8 +74,7 @@ function MyPost(props) {
     }
     
     const notifyEditSuccess = () => toast.info(" ✔ Đã bấm vào tiêu đề!");
-    const notifyDeleteSuccess = () => toast.success(" Xóa bài đăng thành công!");
-    const notifyFall = () => toast.error("Đừng ấn linh tinh!");
+    const notifyFall = () => toast.error("test errol!");
 
   return (
       <div className="forum-page" id="my-post">

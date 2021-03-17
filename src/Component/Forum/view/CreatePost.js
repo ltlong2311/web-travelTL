@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+import { connect } from 'react-redux';
 
 
 function CreatePost(props) {
@@ -31,9 +31,10 @@ function CreatePost(props) {
     newPost.title = postTitle;
     newPost.category = postCategory;
     newPost.content = postContent;
+    newPost.poster = 'Travel TL';
+    newPost.posterImg = 'https://ktmt.vnmediacdn.com/images/2020/11/11/9-1605062035-a-02.jpg';
     props.getData(newPost);
     console.log(newPost);
-    notify();
   }
 
   let time = new Date().toLocaleTimeString();
@@ -126,11 +127,20 @@ function CreatePost(props) {
             </div>
           </div>
         </div>
-        <ToastContainer />
     </div>
     
   );
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    notifyCreatePost: (notify) => {
+      dispatch({
+          type: "NOTIFY_SUCCESS",
+          notify
+      })
+    }
+  }
+}
 
 
-export default CreatePost;
+export default connect(null,mapDispatchToProps)(CreatePost)

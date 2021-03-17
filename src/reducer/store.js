@@ -43,8 +43,8 @@ const allReducer = (state = postInitialState, action) => {
         case "NOTIFY_SUCCESS":
             toast.success(action.notify);
             return {...state, notify:action.notify}
-        case "NOTIFY_EDIT_POST_SUCCESS":
-            toast.info(" ✔ Sửa thành công");
+        case "NOTIFY_ERROR":
+            toast.error(action.notify);
             return {...state, notify:action.notifyEdit}
             // return {...state,isNotify:!state.isNotify, notify:action.notifyEdit}       
         default:

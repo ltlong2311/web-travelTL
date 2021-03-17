@@ -21,8 +21,21 @@ function QuickPost(props) {
       newPost.poster = 'Ẩn danh';
       // newPost = JSON.stringify(newPost);
       // props.getData(newPost);
-      props.addDataStore(newPost);
-      console.log("Thêm " + JSON.stringify(newPost)+" thành công!");
+      if(postTitle&&postContent){
+        props.addDataStore(newPost);
+        console.log("Thêm " + JSON.stringify(newPost)+" thành công!");
+        props.postSuccess("Đăng bài thành công!");
+        setPostTitle('');
+        setPostContent('');
+      } else if(!postTitle){
+        props.postError("Không thể để trống tiêu đề!");
+        setPostTitle('');
+        setPostContent('');
+      } else if(!postContent){
+        props.postError("Bài đăng thiếu trường nội dung!");
+        setPostTitle('');
+        setPostContent('');
+      }
     }
     
     return (
@@ -53,8 +66,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     addDataStore: (newPost) => {
       dispatch({type:"ADD_DATA", newPost})
-    }
+    },
+    postSuccess: (notify) => {
+      dispatch({type:"NOTIFY_SUCCESS", notify})
+    },
+    postError: (notify) => {
+      dispatch({type:"NOTIFY_ERROR", notify})
+    },
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(QuickPost);
-// export default QuickPost;

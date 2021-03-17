@@ -40,7 +40,7 @@ function EditPost(props) {
       props.addEditData(dataPostChanged); 
       console.log("Thay đổi thành công " + JSON.stringify(dataPostChanged));
       // toast.success("Thay đổi thành công ");
-      props.notifyEditPost(" ✔ Thay đổi thành công")
+      props.notifyEditPost(" ✔ Thay đổi thành công");
       props.changeEditPost(); // dong postForm
 
     }

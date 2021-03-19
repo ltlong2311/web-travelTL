@@ -32,7 +32,7 @@ function CreatePost(props) {
     newPost.category = postCategory;
     newPost.content = postContent;
     newPost.poster = 'Travel TL';
-    newPost.posterImg = 'https://ktmt.vnmediacdn.com/images/2020/11/11/9-1605062035-a-02.jpg';
+    newPost.posterImg = 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg';
     props.getData(newPost);
     console.log(newPost);
   }
@@ -56,14 +56,14 @@ function CreatePost(props) {
               <div className="card">
                 <div className="card-body">
                   <div id="react-root_forum-create-story">
-                    <div className="Toastify" />
+                    {/* <div className="Toastify" /> */}
                       <div className="media">
                         <a href="/" className="mr-2 media-left">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" alt="ThanhLong" className="rounded-circle media-object" style={{ width: "60px", height: "60px" }}/>
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" alt="Travel TL" className="rounded-circle media-object" style={{ width: "60px", height: "60px" }}/>
                         </a>
                         <div className="media-body">
                           <a href=" /">
-                            <strong style={{ fontSize: "18px" }}>ThanhLong</strong>
+                            <strong style={{ fontSize: "18px" }}>Travel TL</strong>
                           </a>
                           <div onClick={notify} className="text-muted small">Chuyên gia du lịch</div>
                           <div className="text-muted small">19 bài diễn đàn</div>

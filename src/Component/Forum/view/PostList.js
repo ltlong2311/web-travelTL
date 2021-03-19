@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Post from './Post'
 import { dataFirebase } from '../../../firebaseConnect' 
 // import { element } from 'prop-types';
-
+import { connect } from 'react-redux'
 
 
 function PostList(props) {
@@ -11,28 +11,44 @@ function PostList(props) {
   const [dataPost, setDataPost] = useState();
   
 
-  useEffect( () => {
+  // useEffect( () => {
+  //   dataFirebase.on('value', (posts) => {
+  //     var arrayData= [];
+  //     posts.forEach(element => {
+  //       const key = element.key;
+  //       const title = element.val().title;
+  //       const category = element.val().category;
+  //       const content = element.val().content;
+  //       const poster = element.val().poster;
+  //       const posterImg = element.val().posterImg;
+  //       arrayData.push({
+  //         key: key,
+  //         title: title,
+  //         category: category,
+  //         content: content,
+  //         poster: poster,
+  //         posterImg: posterImg 
+  //       });
+  //     });
+  //     setDataPost(arrayData);
+  //   });
+  // }, []);
+
+    useEffect( () => {
     dataFirebase.on('value', (posts) => {
       var arrayData= [];
+      console.log(posts);
       posts.forEach(element => {
-        const key = element.key;
-        const title = element.val().title;
-        const category = element.val().category;
-        const content = element.val().content;
-        const poster = element.val().poster;
-        const posterImg = element.val().posterImg;
-        arrayData.push({
-          key: key,
-          title: title,
-          category: category,
-          content: content,
-          poster: poster,
-          posterImg: posterImg 
-        });
+        if(element.val().title.indexOf(props.searchPost) !== -1){
+          arrayData.push(element.val());
+        }
       });
       setDataPost(arrayData);
     });
-  }, []);
+  }, [props.searchPost]);
+
+
+  
 
   
   const getData = () => {
@@ -112,14 +128,18 @@ function PostList(props) {
               
               {/* {isShowQuickPost()} */}
 
-              <div id="accordianId" className="mb-2" role="tablist" aria-multiselectable="true">
+              <div id="accordianId" className="category-list mb-3" role="tablist" aria-multiselectable="true">
                 <div className="card">
                   <div className="card-header" role="tab" id="section1HeaderId">
-                    <h5 className="mb-0">
-                      <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId" aria-expanded="true" aria-controls="section1ContentId">
-                        Hỏi Đáp Du Lịch
-                      </a>
-                    </h5>
+                    <div className="category-topic">
+                      <span className="color mr-1" style={{backgroundColor: "#3a539b"}}></span>
+                      <span className="topic mb-0">
+                        <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId" aria-expanded="true" aria-controls="section1ContentId">
+                          Hỏi Đáp Du Lịch
+                        </a>
+                      </span>
+                    </div>
+                    <div className="topic-desc text-gray">Đưa ra câu hỏi và giải đáp những ý kiến thắc mắc xung quanh vấn đề du lịch.</div>
                   </div>
                   <div id="section1ContentId" className="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
                     <div className="card-body">
@@ -130,11 +150,15 @@ function PostList(props) {
 
                 <div className="card">
                   <div className="card-header" role="tab" id="section2HeaderId">
-                    <h5 className="mb-0">
-                      <a data-toggle="collapse" data-parent="#accordianId" href="#section2ContentId" aria-expanded="true" aria-controls="section2ContentId">
-                        Tìm Kiếm Tour
-                      </a>
-                    </h5>
+                    <div className="category-topic">
+                      <span className="color mr-1" style={{backgroundColor: "#019875"}}></span>
+                      <span className="topic mb-0">
+                        <a data-toggle="collapse" data-parent="#accordianId" href="#section2ContentId" aria-expanded="true" aria-controls="section2ContentId">
+                        Hướng Dẫn Du Lịch
+                        </a>
+                      </span>
+                    </div>
+                    <div className="topic-desc text-gray"> Chỉ dẫn những điều hữu ích và cần thiết nên lưu ý trong hành trình du lịch.</div>
                   </div>
                   <div id="section2ContentId" className="collapse in" role="tabpanel" aria-labelledby="section2HeaderId">
                     <div className="card-body">
@@ -144,12 +168,16 @@ function PostList(props) {
                 </div>
 
                 <div className="card">
-                  <div className="card-header" role="tab" id="section2HeaderId">
-                    <h5 className="mb-0">
+                  <div className="card-header" role="tab" id="section3HeaderId">
+                    <div className="category-topic">
+                      <span className="color mr-1" style={{backgroundColor: "#f7ca18"}}></span>
+                      <span className="topic mb-0">
                       <a data-toggle="collapse" data-parent="#accordianId" href="#section3ContentId" aria-expanded="true" aria-controls="section3ContentId">
-                        Đánh Giá Chuyến Đi
+                        Nhận Xét Chuyến Đi
                       </a>
-                    </h5>
+                      </span>
+                    </div>
+                    <div className="topic-desc text-gray">Bàn luận về chất lượng, các vấn đề, hoặc đưa ra cảm nhận riêng của bản thân trong chuyến đi.</div>
                   </div>
                   <div id="section3ContentId" className="collapse in" role="tabpanel" aria-labelledby="section3HeaderId">
                     <div className="card-body">
@@ -158,25 +186,250 @@ function PostList(props) {
                   </div>
                 </div>
 
+                <div className="card">
+                  <div className="card-header" role="tab" id="section4HeaderId">
+                    <div className="category-topic">
+                      <span className="color mr-1" style={{backgroundColor: "#22a7f0"}}></span>
+                      <span className="topic mb-0">
+                      <a data-toggle="collapse" data-parent="#accordianId" href="#section4ContentId" aria-expanded="true" aria-controls="section4ContentId">
+                        Giới Thiệu Điểm Đến
+                      </a>
+                      </span>
+                    </div>
+                    <div className="topic-desc text-gray"> Review những địa điểm du lịch thú vị.</div>
+                  </div>
+                  <div id="section4ContentId" className="collapse in" role="tabpanel" aria-labelledby="section4HeaderId">
+                    <div className="card-body">
+                      84232 bài viết
+                    </div>
+                  </div>
+                </div>
+
                 
+                <div className="card">
+                  <div className="card-header" role="tab" id="section5HeaderId">
+                    <div className="category-topic">
+                      <span className="color mr-1" style={{backgroundColor: "#f64747"}}></span>
+                      <span className="topic mb-0">
+                      <a data-toggle="collapse" data-parent="#accordianId" href="#section5ContentId" aria-expanded="true" aria-controls="section5ContentId">
+                        Phản Ánh Vấn Đề
+                      </a>
+                      </span>
+                    </div>
+                    <div className="topic-desc text-gray">Thông báo những vấn đề mà bản thân gặp phải để được tư vấn hỗ trợ từ Travel TL và mọi người.</div>
+                  </div>
+                  <div id="section5ContentId" className="collapse in" role="tabpanel" aria-labelledby="section5HeaderId">
+                    <div className="card-body">
+                      84232 bài viết
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+              <div className="topics" id="interest-topics">
+                <div className="cat-bar">
+                  <h3>
+                    Có thể bạn quan tâm
+                  </h3>
+                </div>
+                <ul className="list-group mb-3">
+                  <li className="list-group-item">
+                    <h2><img width="20px" height="20px" src="https://cdn.pixabay.com/photo/2017/05/15/23/33/family-icon-2316421_1280.png" alt="Dot" title="Dot" />
+                      <a alt="" title="" href=" #" target="_blank"> Chuyến đi gia đình</a>
+                    </h2>
+                  </li>
+                  <li className="list-group-item">
+                    <h2><i className="fas fa-suitcase-rolling"></i>
+                      <a alt="" title="" href=" #" target="_blank"> Du lịch dài ngày</a>
+                    </h2>
+                  </li>
+                  <li className="list-group-item ">
+                    <h2><i className="fas fa-hotel"></i>
+                      <a alt="" title="" href=" #" target="_blank"> Khách sạn giá rẻ</a>
+                    </h2>
+                  </li>
+                  <li className="list-group-item ">
+                    <h2><i className="fas fa-images"></i>
+                      <a alt="" title="" href=" #" target="_blank"> Điểm chụp ảnh thú vị</a>
+                    </h2>
+                  </li>
+                  <li className="list-group-item ">
+                    <h2><i className="fas fa-swimmer"></i>
+                      <a alt="" title="" href=" #" target="_blank"> Thiên đường bơi lội</a>
+                    </h2>
+                  </li>
+                  <li className="list-group-item ">
+                    <h2><i className="fas fa-umbrella-beach"></i>
+                      <a alt="" title="" href=" #" target="_blank"> Kinh nghiệm du lịch</a>
+                    </h2>
+                  </li>
+                </ul>
               </div>
 
-              <ul className="list-group mb-3 category-sidebar">
-                <li className="list-group-item ">
-                  <h3><a href="/dien-dan/ban-luan-truyen/" className="category-badge">
-                      <span className="color mr-1" style={{backgroundColor: '#0a8ddf'}} />
-                      <span className="name"><span>Du lịch Châu Âu</span> <small>x 63,459</small></span>
-                    </a></h3>
-                  <div className="badge-desc text-gray">issum</div>
-                </li>
-                <li className="list-group-item ">
-                  <h3><a href="/dien-dan/dich-truyen/" className="category-badge">
-                      <span className="color mr-1" style={{backgroundColor: '#4a68b7'}} />
-                      <span className="name"><span>Chuyến đi gia đình</span> <small>x 9,897</small></span>
-                    </a></h3>
-                  <div className="badge-desc text-gray">lorem</div>
-                </li>
-              </ul>
+              <div className="mb-3" style={{filter:"brightness(90%)"}}>
+                <img width="100%" src="./img/bg-7.jpg" alt="" />
+              </div>
+
+              <div className="mt-2" id="active-members">
+                <div className="cat-bar">
+                  <h3>
+                    Thành viên tích cực
+                  </h3>
+                </div>
+                <ul className="list-group mb-3 list-active-members">
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">TravelTL </a>
+                      </span>  
+                      <span className="active-user__rank"> Bậc thầy</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>331</span> bài đăng</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="./img/multi-country.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">letlong </a>
+                      </span>  
+                      <span className="active-user__rank"> Chuyên gia</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>210</span> bài đăng</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="https://static.yeah1.com/uploads/editors/27/2020/03/21/JaZBMzV14fzRI4vBWG8jymplSUGSGgimkqtJakOV.jpeg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">Nguoibianso1</a>
+                      </span>  
+                      <span className="active-user__rank"> Phượt thủ</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>123</span> bài đăng</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="./img/tl1.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">dgnhangheo</a>
+                      </span>  
+                      <span className="active-user__rank"> Khách Quen</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>57</span> bài đăng</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="./img/we-05.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">Wxrdie</a>
+                      </span>  
+                      <span className="active-user__rank"> Lữ Khách</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>34</span> bài đăng</span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="mt-2" id="most-commenter">
+                <div className="cat-bar">
+                  <h3>
+                    Bình luận nhiều
+                  </h3>
+                </div>
+                <ul className="list-group mb-3 list-most-commenter">
+                  <div className="triangle"/>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">TravelTL </a>
+                      </span>  
+                      <span className="active-user__rank"> Vua bình luận</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>521</span> bình luận</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="./img/multi-country.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">letlong </a>
+                      </span>  
+                      <span className="active-user__rank"> Thánh chém</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>420</span> bình luận</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="https://static.yeah1.com/uploads/editors/27/2020/03/21/JaZBMzV14fzRI4vBWG8jymplSUGSGgimkqtJakOV.jpeg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">Nguoibianso1</a>
+                      </span>  
+                      <span className="active-user__rank"> Thần Phán</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>261</span> bình luận</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="./img/tl1.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">dgnhangheo</a>
+                      </span>  
+                      <span className="active-user__rank"> Nhà phê bình</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>163</span> bình luận</span>
+                      </span>
+                    </div>
+                  </li>
+                  <li className="list-group-item">
+                    <div className="active-member">
+                      <a href=" #" className="active-user--profile-link">
+                        <img src="./img/we-05.jpg" alt="TravelTL" width={35} height={35} className="active-user__photo" />
+                      </a>
+                      <span className="active-user__name mr-2">
+                        <a href=" #" className="active-user--profile-link">Wxrdie</a>
+                      </span>  
+                      <span className="active-user__rank"> Tập sự</span>
+                      <span className="display-block">
+                        <span className="active-user__points">+ <span>95</span> bình luận</span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
         </div>
       </div>
@@ -185,5 +438,10 @@ function PostList(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    searchPost: state.searchPost
+  }
+}
 
-export default PostList
+export default connect(mapStateToProps)(PostList)

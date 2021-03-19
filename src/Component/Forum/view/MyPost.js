@@ -19,20 +19,24 @@ function MyPost(props) {
         dataFirebase.on('value', (posts) => {
         var arrayData= [];
         posts.forEach(element => {
-            const key = element.key;
-            const title = element.val().title;
-            const category = element.val().category;
-            const content = element.val().content;
-            const poster = element.val().poster;
-            const posterImg = element.val().posterImg;
-            arrayData.push({
-            id: key,
-            title: title,
-            category: category,
-            content: content,
-            poster: poster,
-            posterImg: posterImg 
-            });
+            // const key = element.key;
+            // const title = element.val().title;
+            // const category = element.val().category;
+            // const content = element.val().content;
+            // const poster = element.val().poster;
+            // const posterImg = element.val().posterImg;
+            // arrayData.push({
+            // id: key,
+            // title: title,
+            // category: category,
+            // content: content,
+            // poster: poster,
+            // posterImg: posterImg 
+            // });
+            // arrayData.push(element.val());
+            if( element.val().poster.indexOf("Travel TL") !== -1 || element.val().poster.indexOf("Ẩn danh") !== -1 ){
+              arrayData.push(element.val());
+            }
         });
         setDataPost(arrayData);
         });

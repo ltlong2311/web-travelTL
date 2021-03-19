@@ -1,6 +1,16 @@
-import React from 'react'
-import {Link} from "react-router-dom";
-function NavForum() {
+import React, {useState} from 'react'
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+function NavForum(props) {
+    const [inputSearch, setInputSearch] = useState('');
+    const isChangeSearch = (e) => {
+        // console.log(e.target.value);
+        props.searchPost(e.target.value); //
+        setInputSearch(e.target.value);
+    }
+    const actionSearch = () => {
+        props.searchPost(inputSearch);
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: '#212529'}}>
@@ -29,8 +39,8 @@ function NavForum() {
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
-                        <input className="col form-control mr-sm-2" type="text" placeholder="Tìm kiếm" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><i className="icon-search fas fa-search"></i></button>
+                        <input onChange={isChangeSearch} className="col form-control mr-sm-2" type="text" placeholder="Tìm kiếm" />
+                        <button onClick={actionSearch} type="button" className="btn btn-outline-success my-2 my-sm-0"><i className="icon-search fas fa-search"></i></button>
                     </form>
                     <Link to="/forum/create" id="btn-edit" className="btn btn-outline-success my-2 my-sm-0 ml-2" name="editPost" role="button"><i className="fas fa-edit" /></Link>
                     </div>
@@ -40,4 +50,14 @@ function NavForum() {
     )
 }
 
-export default NavForum;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        searchPost: (searchText) => {
+            dispatch({
+                type: "SEARCH",
+                searchText
+            })
+        }
+    }
+}
+export default connect(null, mapDispatchToProps)(NavForum)

@@ -8,10 +8,8 @@ const postInitialState = {
     title: 'test',
     isEdit: false,
     editPost:{},
-    showNotify: false,
-    isNotify: false,
     notify: "",
-    numNotify: 0,
+    searchPost:"",
 }
 const allReducer = (state = postInitialState, action) => {
     switch (action.type) {
@@ -47,6 +45,9 @@ const allReducer = (state = postInitialState, action) => {
             toast.error(action.notify);
             return {...state, notify:action.notifyEdit}
             // return {...state,isNotify:!state.isNotify, notify:action.notifyEdit}       
+        case "SEARCH":
+            console.log(action.searchText);
+            return {...state, searchPost:action.searchText}
         default:
             return state
     }

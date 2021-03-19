@@ -75,7 +75,130 @@ a, a:hover {
     padding-top: 24px;
     padding-bottom: 80px;
 }
+#interest-topics .cat-bar{
+    background-color: #17a2b8;   
+}
+#active-members .cat-bar{
+    background-color: #67809f;
+    text-align: center;    
+    padding: 0 12px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+#active-members .cat-bar{
+    background-color: #049372;
+    text-align: center;    
+    padding: 0 12px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    border-top-right-radius: 6px;
+}
+#active-members .list-active-members{
+    text-align: left;
+}
+#most-commenter .cat-bar{
+    background-color: #29a1e2;
+    text-align: center;    
+    padding: 0 12px;
+    width: 60%;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    border-top-right-radius: 6px;
+}
+#most-commenter{
+    position: relative;
+}
+.triangle{
+    position: absolute;
+    z-index: 998;
+    border-top: 9px solid;
+    border-right: 12px solid transparent;
+    border-top-color: #22a7f0;
+}
+#active-members .active-user__points{
+    background-color: #947cb0;
+    /* background-color:#67809f; */
+}
+#most-commenter .active-user__points{
+    background-color: #0fa0e4;
+}
+#most-commenter .active-user__rank{
+    /* display: none; */
+    color: #56bff0;
+}
+#most-commenter .list-most-commenter{
+    text-align: left;
+}
 
+#interest-topics .list-group .list-group-item h2{
+    font-size: 16px;
+}
+#interest-topics .list-group .list-group-item i{
+    color: #17a2b8;
+}
+#forum .cat-bar h3{
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    padding: 9px 0px 9px;
+}
+#forum .category-list .color {
+    background-color: #4497f8;
+    border: none;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+#forum .category-list{
+    text-align: left;
+}
+#forum .category-list .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    /* background-color: rgba(252, 243, 243, 0.993); */
+    background-color:#fff;
+    border-bottom: 1px rgba(87, 79, 79, 0.144);
+}
+#forum .category-list .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: .5rem 1.25rem;
+    font-size: 12px;
+    border-top: 1px inset rgba(0,0,0,.125);
+}
+#forum .category-list a{
+   font-size: 14px;
+}
+#forum .category-topic {
+    font-size: 12px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+#forum .category-topic .topic{
+    font-size: 12px;
+    color: #111;
+    font-weight: 700;
+    
+}
+#forum .category-list .topic-desc{
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+#forum .text-gray {
+    color: #919191!important;
+}
 #forum .icon-edit{
     display: none;
 }
@@ -88,7 +211,6 @@ a, a:hover {
     color:#9c9c9c;
     cursor: pointer;
 }
-
 
 #forum .icon-delete{
     display: none;
@@ -115,8 +237,67 @@ a, a:hover {
     }
 
 } */
+
+
+#forum .list-active-members{
+    position: relative;
+}
+.active-user{
+    flex: 1 1 0;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    /* display: flex; */
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+.active-user--left{
+    flex: 1 0 auto;
+}
+.display-block{
+    display: block;
+}
+.active-user__points{
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    background-color: #947cb0;
+    /* background-color:#67809f; */
+}
+
+.active-user__photo{
+    width: 48px;
+    height: 48px;
+    float: none;
+    margin-right: 0;
+    border-radius: 50%;
+    background-color: var(--color-accent-dark);
+}
+
+.active-user__rank{
+    font-size: 14px;
+    color: #f5a623;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.active-user__name{
+    font-weight: 500;
+    display: inline-block;
+}
 @media (max-width: 767px){
-   #forum .forum-content{
-       display: none;
-   }
+    #forum .forum-content{
+        display: none;
+    }
+ }
+ 
+@media (min-width: 992px){
+    .active-user__photo{
+        float: left;
+        margin-right: 10px;
+    }
 }

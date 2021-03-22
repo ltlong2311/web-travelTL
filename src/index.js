@@ -13,7 +13,7 @@ ReactDOM.render(
   <Provider store={store1}>
     <App/>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('travelTL-page')
 );
 
 // If you want to start measuring performance in your app, pass a function

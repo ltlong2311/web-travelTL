@@ -58,6 +58,7 @@ const mapDispatchToProps = (dispatch) => {
                 searchText
             })
         }
+        
     }
 }
 export default connect(null, mapDispatchToProps)(NavForum)

@@ -68,17 +68,6 @@ function PostList(props) {
     }
   }
 
-  // const isShowQuickPost = () => {
-  //   if(quickPost === true){
-  //     return <QuickPost />
-  //   }
-  // }
-  
-  // const deleteData= (id) => {
-  //   var connectData = firebase.database().ref('post');
-  //   connectData.child(id).remove();
-  //   console.log("ban vua xoa thanh cong");
-  // }
   
   return (
       <div className="forum-page" id="forum">
@@ -98,14 +87,36 @@ function PostList(props) {
                   </thead>
                   {getData()}
                 </table>
+                <div className="px-3">
+                  <nav aria-label="nut chuyen trang">
+                    <ul className="pagination d-flex justify-content-between">
+                      <li className="page-item" style={{width: '130px'}}>     
+                        {/* <a className="btn btn-info" href="?page=" aria-label="Trang Trước">
+                          <span>Trang Trước</span><span aria-hidden="true">
+                            <i className="iconfont icon-right" />
+                          </span>
+                        </a> */}
+                      </li>
+                      <li className="page-item">
+                        Trang <select id="id_select_page" data-select2-id="id_select_page" tabIndex={-1} className="select-page select2-hidden-accessible" aria-hidden="true">
+                          <option value={1} selected data-select2-id={2}>1</option>
+                          <option value={2}>2</option>
+                          <option value={3}>3</option>
+                          <option>...</option>
+                        </select>
+                        <span className="ml-1">/1</span>
+                      </li>
+                      <li className="page-item" style={{width: '130px'}}>     
+                        <a className="btn btn-info" href="?page=2" aria-label="Trang Sau">
+                          <span>Trang Sau</span><span aria-hidden="true">
+                            <i className="iconfont icon-right" />
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
-              
-              <div className="mt-2 mb-3">
-                  {/* <button onClick={pushData} type="button" className="btn btn-primary">Thêm</button>
-                <button onClick={()=>deleteData("-MVEki7eUuDEVRCFQDmT")} type="button" className="btn btn-primary">Xóa</button> */}
-                  {/* <div onClick={changeQuickPost} className="btn btn-info">+ <small> Thêm nhanh</small></div> */}
-              </div>
-              {/* {quickPost? <QuickPost changeQuickPost={changeQuickPost} />: null} */}
             </div>
            
             <div className="forum-content col-md-4 center-col">

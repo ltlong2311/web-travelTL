@@ -33,10 +33,27 @@ function CreatePost(props) {
     newPost.content = postContent;
     newPost.poster = 'Travel TL';
     newPost.posterImg = 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Sanhohonyenphuyen.jpg';
-    props.getData(newPost);
-    console.log(newPost);
+    if(postTitle&&postContent&&postCategory){
+      props.getData(newPost);
+      console.log("Thêm " + JSON.stringify(newPost)+" thành công!");
+      props.postSuccess("Đăng bài thành công!");
+      setPostTitle('');
+      setPostContent('');
+      window.location.replace("/forum");
+    } else if(!postTitle){
+      props.postError("Chưa nhập tiêu đề!");
+      setPostTitle('');
+      setPostContent('');
+    } else if(!postCategory){
+      props.postError("Không thể để trống thể loại tin!");
+      setPostTitle('');
+      setPostContent('');
+    } else if(!postContent){
+      props.postError("Bài đăng không thiếu để trống nội dung!");
+      setPostTitle('');
+      setPostContent('');
+    }
   }
-
   let time = new Date().toLocaleTimeString();
   const [ctime, setCtime] = useState(time);
   const UpdateTime = () => {
@@ -113,7 +130,7 @@ function CreatePost(props) {
                         </label>
                         <textarea name="postContent" onChange={(e)=>isContentChange(e)} className="form-control" id="exampleFormControlTextarea1" rows="15" ></textarea>
                       </div>
-                      <button type="submit" onClick={addDataPost} className="btn btn-primary mt-2">
+                      <button type="reset" onClick={addDataPost} className="btn btn-primary mt-2">
                         <i className="fas fa-check"></i> Đăng Bài Ngay
                       </button>
                     
@@ -133,11 +150,11 @@ function CreatePost(props) {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    notifyCreatePost: (notify) => {
-      dispatch({
-          type: "NOTIFY_SUCCESS",
-          notify
-      })
+    postSuccess: (notify) => {
+      dispatch({type:"NOTIFY_SUCCESS", notify})
+    },
+    postError: (notify) => {
+      dispatch({type:"NOTIFY_ERROR", notify})
     }
   }
 }

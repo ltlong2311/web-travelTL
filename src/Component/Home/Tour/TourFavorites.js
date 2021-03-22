@@ -1,6 +1,6 @@
 import React from 'react'
 import TourCard from './TourCard/TourCard'
-import dataTour from './TourCard/dataTour.json'
+import dataTour from '../../dataTourFavorite.json'
 
 export default function TourFavorites(props) {
     return (
@@ -32,6 +32,8 @@ export default function TourFavorites(props) {
                                 dataTour.map((value,key) => {
                                     return(
                                     <TourCard key={key}
+                                    tourId={key}
+                                    valueTourFavorite={value}
                                     img={value.img}
                                     place={value.place}
                                     tourName={value.tourName}

@@ -4,14 +4,13 @@ import Nav from "./Component/Nav/Nav";
 import RouterURL from "./Router/RouterURL";
 import {
   BrowserRouter as Router,
-  // Switch,
-  // Route,
-  // Link
+
 } from "react-router-dom";
 import {connect} from 'react-redux';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollTop from "./Component/ScrollTop/ScrollTop";
 
 
 
@@ -28,7 +27,8 @@ function App(props) {
   // }
   return (
     <Router>
-      <div className="App">
+      <div className="main-page">
+        <ScrollTop />
         <Nav />
         <RouterURL />
         <Footer />
@@ -42,8 +42,6 @@ function App(props) {
 const mapStateToProps = (state) => {
   return {
     notify: state.notify,
-    isNotify: state.isNotify,
-    numNotify: state.numNotify
   }
 }
 

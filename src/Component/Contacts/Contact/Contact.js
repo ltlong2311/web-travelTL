@@ -46,7 +46,8 @@ export default class Contact extends Component {
     }
     render() {
         if (this.state.isRedirect){
-          alert(this.getGiaTri());
+          alert("Gửi liên hệ thành công!");
+          console.log(this.getGiaTri());
           return <Redirect to="/" />;
         }
         return (
@@ -112,7 +113,7 @@ export default class Contact extends Component {
                           </div>
                           <br />
                           <div id="success" />
-                          <div className="form-group text-center"><button className="btn btn-primary btn-xl" onClick={(event) => this.submitForm(event)}id="sendMessageButton" type="submit">Send</button></div>
+                          <div className="form-group text-center"><button className="btn btn-primary btn-xl" onClick={(event) => this.submitForm(event)} id="sendMessageButton" type="submit">Send</button></div>
                         </form>
                       </div>
                     </div>

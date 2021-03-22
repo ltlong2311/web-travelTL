@@ -72,7 +72,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     postError: (notify) => {
       dispatch({type:"NOTIFY_ERROR", notify})
-    },
+    }
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(QuickPost);

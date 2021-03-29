@@ -25,7 +25,7 @@ function TourCard(props) {
             <div className="popular">
                 <div className="popular_inner">
                 <figure>
-                    <img src={props.img} alt="" className="img-responsive" />
+                    <img src={props.image} alt="" className="img-responsive" />
                     <div className="over">
                         <div className="v1"><span>Tour {props.place}</span></div>
                         <div className="v2">{props.cost} VND</div>
@@ -34,7 +34,7 @@ function TourCard(props) {
                 <div className="caption">
                     <div className="txt1">
                         <span>{props.tourName}</span>
-                        <p>{props.longTime} Ngày/ {props.longTime -1 } Đêm</p>
+                        <p>{props.days} Ngày/ {props.days -1 } Đêm</p>
                     </div>
                     <div className="txt2">{props.quote}</div>
                     <div className="txt3">

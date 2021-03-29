@@ -64,8 +64,7 @@ video {
   }
   #wrapper h1 {
     color: #fff;
-    font-size: 64px;
-    /* text-shadow: 0 0 1px rgb(0 0 0 / 60%); */
+    font-size: 4rem;
     text-shadow: 1px 1px 2px #000;
     font-family: "Muli", sans-serif;
   }
@@ -123,6 +122,7 @@ video {
     background: #19b5fe;
     color: #fff;
     font-weight: 700;
+
   }
   .image-slide {
     filter: brightness(80%);
@@ -131,6 +131,7 @@ video {
     min-width: 100%;
     width: auto;
     z-index: 99;
+    /* clip-path: ellipse(88% 55% at 54% 44%); */
   }
   .asia-destinations .overlay {
     position: absolute;
@@ -140,6 +141,15 @@ video {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.144);
   }
+  .tour-time{
+    display: none;
+  }
+  .tour-detail-page .tour-time{
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
 
 
 }
@@ -195,6 +205,9 @@ video {
     color: #fff;
     background-color: #19b5fe;
   }
+  .tour-time {
+    display: none;
+}
   .inputSearch .text-search{
     display: none;
   }

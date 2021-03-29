@@ -2,32 +2,51 @@
     .des-content{
         background-color: #fff;
         position: relative;
-    
     }
-}
-@media (min-width: 992px){
-    .mr-header{
-        /* margin-top: 690px; */
-    }
-}
-@media (max-width: 992px){
-    .mr-header{
-        margin-top: 0px;
-    }
-}
-@media (min-width: 992px){
     .marketing{
         position: relative;
         top: 30px;
         z-index: 999;
     }
+    #home .hero-content h1{
+        animation: heading 2s 1;
+    }
+    @keyframes heading {
+        0% {
+            opacity: 0;
+            transform: scale(0.6)
+        }
+        99.9999% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .section-heading{
+        animation: intro 2s 3s 1;
+    }
+    @keyframes intro {
+        0% {
+            opacity: 0;
+            transform: translateY(100px)
+        }
+        99.9999% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
+
 @media (max-width: 992px){
+    .mr-header{
+        margin-top: 0px;
+    }
     .marketing{
         position: relative;
         top: 0px;
     }
 }
+
+
 .about-exo-subscribe input {
     border: 2px solid #ccc;
     border-radius: 4px 0 0 4px;

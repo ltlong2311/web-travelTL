@@ -1,5 +1,6 @@
 import {dataFirebase} from '../firebaseConnect';
-import firebase from 'firebase';
+// import firebase from 'firebase/app';
+// import 'firebase/database';
 import { toast } from 'react-toastify';
 var redux = require('redux');
 
@@ -14,7 +15,8 @@ const postInitialState = {
 const allReducer = (state = postInitialState, action) => {
     switch (action.type) {
         case "ADD_DATA":
-            var pushData = firebase.database().ref('post');
+            // var pushData = firebase.database().ref('post');
+            var pushData = dataFirebase;
             pushData.push(action.newPost);
             console.log("connect success ");
             return state
@@ -26,7 +28,7 @@ const allReducer = (state = postInitialState, action) => {
             return {...state, editPost:action.postEditInfo}
         
         case "EDIT_POST":
-            dataFirebase.child(action.dataPostChanged.id).update({       // update vao du lieu co cung id dang sua 
+            dataFirebase.child(action.dataPostChanged.id).update({       
                 title: action.dataPostChanged.title,
                 category: action.dataPostChanged.category,
                 content: action.dataPostChanged.content

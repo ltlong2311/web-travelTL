@@ -5,11 +5,9 @@ import NavForum from './view/NavForum'
 import CreatePost from './view/CreatePost';
 import './Forum.css'
 
-import firebase from 'firebase';
+import {dataFirebase} from '../../firebaseConnect';
+// import firebase from 'firebase';
 
-// import firebase from 'firebase/app';
-// import 'firebase/database'; // If using Firebase database
-// import 'firebase/storage';
 // import RouterForum from "./RouterForum";
 
 import {
@@ -18,10 +16,9 @@ import {
   Route
 } from "react-router-dom";
 import MyPost from './view/MyPost';
-// import AlertInfo from './view/AlertInfo';
 
 const addData = (newPost) => {
-  var connectData = firebase.database().ref('post');
+  var connectData = dataFirebase;
   connectData.push(newPost);
 }
 

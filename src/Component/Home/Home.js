@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Header from '../Header/Header';
 import IntroContent from './IntroContent/IntroContent';
 import './Home.css'
-import Tour from './Tour/Tour';
+import Destinations from './Tour/Destinations';
 import NewsList from './News/NewsList';
 import TourFavorites from './Tour/TourFavorites';
 import TourNew from './Tour/TourNew';
@@ -35,7 +35,7 @@ function Home() {
                 Chào mừng đến với Website du lịch TL, hãy lựa chọn và tận hưởng những chuyến du lịch tuyệt vời thôi nào! 
             </marquee>  */}
             <IntroContent />
-            <Tour />
+            <Destinations />
             <TourFavorites />
             <TourNew />
             <NewsList />

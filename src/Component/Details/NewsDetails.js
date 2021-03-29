@@ -3,6 +3,7 @@ import Header from '../Header/Header'
 import Detail from './NewsDetail/NewsDetail'
 import Related from './NewsDetail/Related'
 import data from '../data.json'
+import './Details.css'
 
 function Details(props) {
     console.log(props);
@@ -15,13 +16,13 @@ function Details(props) {
         <div className='details-page'> 
             <Header title="News" image='../img/news-header4.jpg'/> 
             <div className="news-details">
-                <div className="container ">
+                <div className="container">
                     {data.map((value,key) => {
                         if(value.id === slugId){
                             return(
                                 <Detail key={key}
                                     value={value}
-                                    img={value.img}
+                                    image={value.image}
                                     quote={value.quote}
                                     time={value.time}
                                     caption={value.caption}
@@ -29,28 +30,27 @@ function Details(props) {
                                     content={value.content}
                                 />
                             )
-                        }else {
-                            return <div key={key}></div>
                         }
+                        return null
                     })}
                     
                     <div className="mb-3">
                         <h3>Tin liên quan</h3>
                     </div>
-                    <div className="row mt-1">
+                    <div className="row mt-1 pb-3">
                         {
-                            data.map((value,key) => {
-                                if( value.id !== slugId ){
+                            data.map((value,key) => {   
+                                if( value.id !== slugId & value.id !== 23824 ){
                                     return(
                                         <Related key={key}
                                             id={value.id}
                                             value={value}
-                                            img={value.img}
+                                            image={value.image}
                                             title={value.title}
                                             quote={value.quote}/>
                                         )
                                 }
-                                return <div key={key}></div>
+                                return null
                             })
                         }       
                     </div>          

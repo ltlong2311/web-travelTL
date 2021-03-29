@@ -23,3 +23,7 @@
 .news-item img:hover{
     filter: brightness(90%);
 }
+.infos .desc{
+    margin-left: 10px;
+    text-align:  left;
+}

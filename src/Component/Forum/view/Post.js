@@ -55,8 +55,8 @@ function Post(props) {
                 </a>                
                 </div>
             </td>
-            <td><span className="small text-muted">14</span></td>
-            <td><span className="num-format small text-muted">124</span></td>
+            <td><span className="small text-muted">-</span></td>
+            <td><span className="num-format small text-muted">123</span></td>
             <td><time dateTime="" className="timeago small text-muted">5m</time></td>
             </tr>
         </tbody>

@@ -9,12 +9,12 @@ function TourDetail(props) {
             <div className="col-md-12 text-center">
               <p>
                 <img
-                  src="img/icon-tour2.png"
+                  src="/img/icon-tour2.png"
                   alt=""
                   className="icon-bg-light"
                 />
               </p>
-              <h2 className="hightlight-underline">TOUR NAME {props.tourName}</h2>
+              <h2 className="hightlight-underline">TOUR</h2>
               <hr />
               <div className="rate">
                 <div className="left_side">
@@ -25,7 +25,7 @@ function TourDetail(props) {
                     <img src="img/star1.png" alt="" />
                     <img src="img/star2.png" alt="" />
                   </div>
-                  <div className="nums"> 251 Đánh giá</div>
+                  <div className="nums">{props.location}</div>
                 </div>
               </div>
             </div>

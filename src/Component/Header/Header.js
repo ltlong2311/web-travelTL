@@ -35,7 +35,7 @@ export default function Header(props) {
                 <div className="hero-content">
                     <div id="wrapper">
                         <h1>{props.title}</h1>
-                        <h3>{props.longTime}</h3>
+                        <div className="tour-time">{props.longTime} Ngày/ {props.longTime -1} Đêm</div>
                         <div className="inputSearch">
                             <form action="/Search" method="get">
                                 <div className="title-slide" >

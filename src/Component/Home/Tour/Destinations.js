@@ -1,7 +1,7 @@
 import React from 'react'
 import './Tour.css'
 
-export default function Tour() {
+export default function Destinations() {
     return (
         <section className="bg-darks" id="destination">
         <div className="container">

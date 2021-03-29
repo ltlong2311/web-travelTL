@@ -27,7 +27,7 @@ export default function NewPage() {
                                 return(
                                 <News key={key}
                                 newsId={value.id}
-                                img={value.img}
+                                image={value.image}
                                 postTime={value.postTime}
                                 title={value.title}
                                 quote={value.quote}/>

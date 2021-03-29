@@ -1,0 +1,142 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Muli, Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: Catamaran, Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+}
+
+.card-deck p {
+  font-size: 15px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  section {
+    padding: 40px 0;
+  }
+
+  .tour-detail-page .image-main, .tour-detail-page .details-page .image-main {
+    height: 40vh;
+  }
+  .tour-detail-page .inputSearch, .tour-detail-page .details-page .image-main {
+    display: none;
+  }
+  .tour-detail-page .hero-container, .tour-detail-page .details-page .image-main {
+    height: 40vh;
+  }
+  .tour-detail-page .header-main, .tour-detail-page .details-page .image-main {
+    height: 40vh;
+    position: relative;
+  }
+  .tour-detail-page .hero-content, .tour-detail-page .details-page .image-main {
+    height: 40vh;
+  }
+
+  .forum-page {
+    /* background-color: #f8f9fa; */
+    background-color: #e6ecf0;
+    position: relative;
+    z-index: 998;
+  }
+  .forum-page .main-content {
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+  .forum-page .stories-list {
+    text-align: left;
+  }
+  .forum-page .topic-emo.L {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/1200px-Star_icon_stylized.svg.png);
+  }
+  .forum-page .forum-rules strong {
+    color: #6c7a89;
+  }
+  .forum-page .story-react .num-liked {
+    font-size: 12px;
+    color: #919191;
+  }
+  .forum-page .story-react i {
+    font-size: 12px;
+  }
+  .forum-page .stories-list thead > tr > th {
+    color: #444;
+    font-size: 16px;
+    /* color: #919191; */
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .forum-page section.cta {
+    position: relative;
+    z-index: 999;
+    padding: 50px 0;
+    background-image: url(../img/bg-9.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .forum-page header.masthead {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: #fff;
+    background: url(../img/bg-4.jpg), #7b4397;
+    /* background:url(../img/bg-2.jpg),linear-gradient(to left,#7b4397,#dc2430); */
+    background-size: cover;
+  }
+
+  .forum-page .story-item .story-meta > a, .forum-page .story-item .story-meta > span, .forum-page .story-item .story-meta > time, .forum-page .story-item .user-item > span {
+    color: #919191;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  a, a:hover {
+    text-decoration: none;
+  }
+
+  .forum-page .stories-list .story-item .story-title {
+    color: #176093;
+    font-size: 16px;
+    /* color: #919191; */
+    font-weight: 600;
+  }
+  .forum-page .stories-list .story-item .story-title:hover {
+    color: rgba(23, 95, 147, 0.842);
+  }
+  .forum-page .stories-list .story-item .five-users .user-item {
+    display: inline-block;
+  }
+  .forum-page .stories-list .story-item .five-users .user-item span {
+    display: inline-block;
+  }
+  .forum-page .stories-list .story-item .five-users .user-item img {
+    border-radius: 50%;
+    vertical-align: text-top;
+    padding-bottom: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -52,7 +52,7 @@ function MyPost(props) {
         if(dataPost){
         return dataPost.map((value, key) => { 
           // console.log(dataPost);
-          // console.log(value.id); // push id=key
+          // console.log(value.id); 
           return (
           <Post
           key={key}

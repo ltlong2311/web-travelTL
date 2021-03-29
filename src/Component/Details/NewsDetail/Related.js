@@ -20,9 +20,9 @@ function Related(props) {
     return (
         <div className="col-md-3 mb-2">
             <div className="card-deck">
-                <div className="card">
+                <div className="card related-news-item">
                     <a href={"/news/" + toSlug(props.title) + "." + props.id + ".html"}>
-                        <img className="card-img-top" height={150} src={props.img} alt="" />
+                        <img src={props.image} className="card-img-top" height={150}  alt="" />
                     </a>
                     <div className="card-body">
                     <h4>

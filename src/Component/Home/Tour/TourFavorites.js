@@ -32,12 +32,12 @@ export default function TourFavorites(props) {
                                 dataTour.map((value,key) => {
                                     return(
                                     <TourCard key={key}
-                                    tourId={key}
+                                    tourId={value.id}
                                     valueTourFavorite={value}
-                                    img={value.img}
+                                    image={value.image}
                                     place={value.place}
                                     tourName={value.tourName}
-                                    longTime={value.time}
+                                    days={value.days}
                                     cost={value.cost}
                                     quote={value.quote}
                                     reviews={value.reviews}/>

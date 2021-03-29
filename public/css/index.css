@@ -525,31 +525,48 @@ section h2 {
     display: none;
   }
   .details-page .hero-container {
-    height: 50vh;
+    height: 60vh;
+    
   }
   .details-page .header-main {
-    height: 50vh;
-    position: relative;
+    height: 60vh;
+   
   }
   .details-page .hero-content {
-    height: 50vh;
+    height: 60vh;
+  }
+  
+  
+  .destinations-page .inputSearch {
+    display: none;
+  }
+  .destinations-page .hero-container {
+    height: 60vh;
+    
+  }
+  .destinations-page .header-main {
+    height: 60vh;
+   
+  }
+  .destinations-page .hero-content {
+    height: 60vh;
   }
 
   .tour-detail-page .image-main {
-    height: 50vh;
+    height: 60vh;
   }
   .tour-detail-page .inputSearch{
     display: none;
   }
   .tour-detail-page .hero-container {
-    height: 50vh;
+    height: 60vh;
   }
   .tour-detail-page .header-main {
-    height: 50vh;
+    height: 60vh;
     position: relative;
   }
   .tour-detail-page .hero-content {
-    height: 50vh;
+    height: 60vh;
   }
   .the-new-forum .hero-container {
     height: 100vh;

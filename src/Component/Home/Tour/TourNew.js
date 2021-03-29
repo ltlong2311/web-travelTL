@@ -24,8 +24,9 @@ export default function TourNew() {
                   tourData.map((value,key) => {
                     return(
                       <TourList key={key}
+                      tourId={value.id}
                       image={value.image}
-                      tourName={value.title}
+                      tourName={value.tourName}
                       nation={value.nation}
                       nationIcon={value.icon}
                       longTime={value.longTime}

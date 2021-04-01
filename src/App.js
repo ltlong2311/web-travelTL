@@ -11,6 +11,8 @@ import {connect} from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollTop from "./Component/ScrollTop/ScrollTop";
+import Image from "./Component/ShowImage/Image";
+import FormLogin from "./Component/Login/FormLogin";
 
 
 
@@ -25,6 +27,16 @@ function App(props) {
   //    toast.success(props.notify);
   //   }
   // }
+   const showImageReview  = () => {
+        if(props.showImageDes){
+          return <Image />
+        }
+    }
+    const showFormLogin  = () => {
+      if(props.showFormLogin){
+        return <FormLogin />
+      }
+  }
   return (
     <Router>
       <div className="main-page">
@@ -34,6 +46,8 @@ function App(props) {
         <Footer />
       </div>
       {/* {notify()} */}
+      {showImageReview()}
+      {showFormLogin()}
       <ToastContainer position="top-right" autoClose={3000} newestOnTop closeOnClick />
     </Router>
   );
@@ -42,6 +56,8 @@ function App(props) {
 const mapStateToProps = (state) => {
   return {
     notify: state.notify,
+    showImageDes: state.showImageDes,
+    showFormLogin: state.showFormLogin
   }
 }
 

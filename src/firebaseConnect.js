@@ -19,14 +19,11 @@ export const FireBase = firebase.initializeApp(firebaseConfig);
 
 export const dataFirebase = firebase.database().ref('post/');
 
-// console.log(firebaseConfig);
 // console.log(FireBase);
-// console.log(dataFirebase);
 // console.log(firebase.database().ref('post/post2'));
 dataFirebase.once('value').then(function(snapshot){
-    console.log(snapshot);
-    console.log(snapshot.val());
-    console.log();
+    // console.log(snapshot);
+    // console.log(snapshot.val());
 })
 
 // var data1 = firebase.database().ref('post/post2');

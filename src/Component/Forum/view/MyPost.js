@@ -72,6 +72,7 @@ function MyPost(props) {
     const changeEditPost = () => {
       setEditPost(!editPost);
     }
+    
     const showEditForm = () => {
       if(props.isEdit){
         return <EditForm changeEditPost={changeEditPost} />
@@ -144,12 +145,12 @@ function MyPost(props) {
   )
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     isEdit: state.isEdit
   }
 }
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     changeEditPost: () => {
       dispatch({

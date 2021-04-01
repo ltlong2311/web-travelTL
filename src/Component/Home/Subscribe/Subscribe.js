@@ -12,7 +12,7 @@ export default function Report() {
         </div>
         <div className="col-md-12 text-center black">
           <blockquote className="about-quote">
-            <p>
+            <p className="text-muted-dark">
               Thế giới Travel TL luôn luôn thay đổi và phát triển. Đăng ký để
               luôn nhận tin tức mới nhất từ chúng tôi!
             </p>
@@ -35,25 +35,25 @@ export default function Report() {
         </div>
         <div className="col-md-12 text-center">
           <div className="social-links">
-            <a target="_blank" title="Facebook" href="facebook.com" alt="hello">
+            <a target="_blank" title="Facebook" rel="noreferrer" href="https://www.facebook.com/lethanhlong.2311/" alt="hello">
               <i className="fab fa-facebook-f" />
             </a>
-            <a target="_blank" title="Twitter" href="Twitter.com" alt="hello">
+            <a target="_blank" title="Twitter" rel="noreferrer" href="Twitter.com" alt="hello">
               <i className="fab fa-twitter" />
             </a>
-            <a target="_blank" title="Linkedin" href="link.com" alt="hello">
+            <a target="_blank" title="Linkedin" rel="noreferrer" href="link.com" alt="hello">
               <i className="fab fa-linkedin-in" />
             </a>
-            <a target="_blank" title="Googleplus" href="google.com" alt="hello">
+            <a target="_blank" title="Googleplus" rel="noreferrer" href="google.com" alt="hello">
               <i className="fab fa-google-plus-g" />
             </a>
-            <a target="_blank" title="Pinterest" href="pint.com" alt="hello">
+            <a target="_blank" title="Pinterest" rel="noreferrer" href="pint.com" alt="hello">
               <i className="fab fa-pinterest-p" />
             </a>
-            <a target="_blank" title="Youtube" href="youtube.com" alt="hello">
+            <a target="_blank" title="Youtube" rel="noreferrer" href="youtube.com" alt="hello">
               <i className="fab fa-youtube" />
             </a>
-            <a target="_blank" title="Instagram" href="instagram.com">
+            <a target="_blank" title="Instagram" rel="noreferrer" href="instagram.com">
               <i className="fab fa-instagram" />
             </a>
           </div>

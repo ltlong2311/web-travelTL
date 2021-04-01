@@ -11,6 +11,9 @@ const postInitialState = {
     editPost:{},
     notify: "",
     searchPost:"",
+    showImageDes: false,
+    imageDes:"",
+    showFormLogin: false,
 }
 const allReducer = (state = postInitialState, action) => {
     switch (action.type) {
@@ -50,6 +53,13 @@ const allReducer = (state = postInitialState, action) => {
         case "SEARCH":
             console.log(action.searchText);
             return {...state, searchPost:action.searchText}
+        case "CHANGE_SHOW_IMAGE_DES":
+            console.log(state.showImageDes);
+            console.log(action.image);
+            return {...state, showImageDes:!state.showImageDes, imageDes: action.image}
+        case "SHOW_FORM_LOGIN":
+            console.log(state.showFormLogin);
+            return {...state, showFormLogin:!state.showFormLogin}
         default:
             return state
     }

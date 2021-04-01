@@ -33,20 +33,20 @@ function News(props) {
     // console.log(props.newsId);
     return (
         <div className="col-md-6 d-flex mb-3" >
-                <div className="news-item d-flex flex-row pl-2">
-                    <a href={"/news/" + toSlug(props.title) + "." + props.newsId + ".html"} className="cover book-shadow" aria-label=" ">
-                        <img src={props.image}  alt="" width={115} height={110} className="lazy zoom-me error" />
-                    </a>
-                    <div className="infos">
-                        <h4><a href={"/news/" + toSlug(props.title) + "." + props.newsId + ".html"} >{props.title}</a></h4>
-                        <div className="info">
-                            <span className="stat text-primary">{props.postTime}</span> 
-                            <span className="stat text-danger ml-1">{props.views} 23,119<small> lượt xem</small></span>
-                        </div>
-                        <blockquote className="desc p-2">{props.quote}</blockquote>
+            <div className="news-item d-flex flex-row pl-2">
+                <a href={"/news/" + toSlug(props.title) + "." + props.newsId + ".html"} className="cover book-shadow" aria-label=" ">
+                    <img src={props.image}  alt="" className="lazy zoom-me error" />
+                </a>
+                <div className="infos">
+                    <h4><a href={"/news/" + toSlug(props.title) + "." + props.newsId + ".html"} >{props.title}</a></h4>
+                    <div className="info">
+                        <span className="stat text-primary">{props.postTime}</span> 
+                        <span className="stat text-danger ml-1">{props.views} 23,119<small> lượt xem</small></span>
                     </div>
+                    <blockquote className="desc p-2">{props.quote}</blockquote>
                 </div>
-            </div>    
+            </div>
+        </div>    
     )
 }
 

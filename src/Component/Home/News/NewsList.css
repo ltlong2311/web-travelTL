@@ -12,9 +12,11 @@
 .news .about-quote p{
     color: #6c757d!important;
 }
-
 .news-list img{
     border-radius: 10px;
+    width: 110px;
+    height: 110px;
+    max-width: none;
 }
 .news-item .infos a:hover{
     text-decoration: none;

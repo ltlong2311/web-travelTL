@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./Nav.css";
-
-export default function Nav() {
+import {connect} from 'react-redux'
+function Nav(props) {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackgroundNavbar = () => {
@@ -49,7 +49,7 @@ export default function Nav() {
                 smooth
                 to="/#intro"
                 data-target="#intro"
-                className="nav-link js-scroll-trigger"
+                className="nav-link"
               >
                 GIỚI THIỆU
               </Link>
@@ -58,7 +58,7 @@ export default function Nav() {
               <Link
                 smooth
                 to="/#destination"
-                className="nav-link js-scroll-trigger"
+                className="nav-link"
                 data-target="#destination"
                 offset={70}
               >
@@ -239,16 +239,16 @@ export default function Nav() {
             <li className="nav-item">
               <Link
                 to="/forum"
-                className="nav-link js-scroll-trigger"
+                className="nav-link"
                 data-target="#forum"
               >
                 <i className="fas fa-users"></i>DIỄN ĐÀN
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/login" className="nav-link js-scroll-trigger">
+              <div onClick={()=> props.showFormLogin()} className="btn btn-login">
                 <i className="fas fa-sign-in-alt"></i> ĐĂNG NHẬP
-              </Link>
+              </div>
             </li>
             {/* <li className="nav-item">
                 <NavLink to="/register" activeClassName="selected" className="nav-link js-scroll-trigger"><i className="fas fa-edit"></i>  ĐĂNG KÝ</NavLink>
@@ -259,3 +259,15 @@ export default function Nav() {
     </nav>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    showFormLogin: () => {
+      dispatch({
+        type: "SHOW_FORM_LOGIN",
+    
+      })
+    }
+  }
+}
+export default connect(null,mapDispatchToProps)(Nav)

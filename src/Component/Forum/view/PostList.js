@@ -99,7 +99,7 @@ function PostList(props) {
                       </li>
                       <li className="page-item">
                         Trang <select id="id_select_page" data-select2-id="id_select_page" tabIndex={-1} className="select-page select2-hidden-accessible" aria-hidden="true">
-                          <option value={1} selected data-select2-id={2}>1</option>
+                          <option value={1} data-select2-id={2}>1</option>
                           <option value={2}>2</option>
                           <option value={3}>3</option>
                           <option>...</option>

@@ -6,6 +6,12 @@
 .pd-bottom-4cd router0 {
     padding-bottom: 40px;
 }
+#destination{
+    padding: 0;
+}
+#destination .icon-svg{
+    margin-top: -35px;
+}
 @media (min-width: 992px){
     .icon-our-asia, .icon-svg {
         width: 71px;
@@ -103,9 +109,26 @@
 
 @media (min-width: 992px){
     .icon-img {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         margin-top: -100px;
+    }
+    .btn-view-more::after{
+        content: "Xem thêm";
+        border: 1px solid #5a5e5f00;
+        text-decoration: none;
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 3px 41px;
+        border-radius: 4px;
+        position: absolute;
+        color: #6b6e6e18;
+        background-color: #9dc77b23!important;
+        z-index: -1;
+        transition: all .4s;
+        transform: scale(1.05);
     }
 }
 @media (max-width: 992px){
@@ -146,23 +169,7 @@
     font-family: 'Muli', sans-serif;
 }
 
-.btn-view-more::after{
-    content: "Xem thêm";
-    border: 1px solid #5a5e5f00;
-    text-decoration: none;
-    top: 0;
-    left: 0;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 3px 41px;
-    border-radius: 4px;
-    position: absolute;
-    color: #6b6e6e18;
-    background-color: #80b1572c!important;
-    z-index: -1;
-    transition: all .4s;
-    transform: scale(1.05);
-}
+
 .btn-view-more:hover::after{
     color: #fff;
     background-color: #80b1574f!important;
@@ -170,7 +177,7 @@
     width: 100%;
     opacity: 0;
 }
-.btn-view-more:hover,.btn-view-more:hover{
+.btn-view-more:hover{
     color: #fff!important;
     background-color: #80b157!important;
     transform: scaleX(1.3);
@@ -195,6 +202,45 @@
 #view-news-list a:hover{
     background-color: #3cce74!important;
 }
+.fav-section .btn-contact{
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    margin: 0 0 10px;
+    border: 1px solid #80b157!important;
+    padding: 3px 20px;
+    border-radius: 4px!important;
+    cursor: pointer;
+  
+}
+.fav-section .btn-contact:hover{
+    background-color: #80b157!important;
+}
+.fav-section .btn-contact:hover a{
+    color: rgba(255, 255, 255, 0.932);
+}
+
+.fav-section .btn-contact:hover a .icon-contact{
+    color: rgba(255, 255, 255, 0.932);
+    transition: 0.4s ease all;
+}
+
+
+.fav-section a {
+    color: #5d6162;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.fav-section a .icon-contact{
+    color: #5d6162;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.fav-section ul{
+    margin: 0;
+    padding: 0;
+}
+
 /* 
 .desc, .desc_2 {
     position: absolute;
@@ -432,7 +478,7 @@
         }
     }
     .navigation-dot{
-        padding-top: 20px;
+        padding: 20px 0px 5px;
         text-align: center;
     }
     .manual-btn {
@@ -445,7 +491,6 @@
         border-color: #000;
         display: inline-block;
         transition: background-color 0.6s ease;
-        
     }
     .manual-btn:hover {
         background-color: #717171;

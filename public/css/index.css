@@ -67,7 +67,20 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
+.green {
+  color: #80b157;
+  font-size: 16px!important;
+  padding: 0 10px;
+}
+.fancybox {
+  position: relative;
+}
+img {
+  max-width: 100%;
+}
+.text-muted-dark {
+  color: #4b5157!important;
+}
 @media (min-width: 992px) {
   section {
     padding: 40px 0;
@@ -206,8 +219,20 @@ section h2 {
   padding: 8px 10px;
   color: #222;
 }
-
+#mainNav .navbar-nav .btn-login{
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  line-height: 2;
+}
 #mainNav .navbar-nav > li > a {
+  font-size: 12px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#mainNav .navbar-nav  {
   font-size: 12px;
   font-family: Lato, Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
@@ -541,15 +566,15 @@ section h2 {
     display: none;
   }
   .destinations-page .hero-container {
-    height: 60vh;
+    height: 40vh;
     
   }
   .destinations-page .header-main {
-    height: 60vh;
+    height: 40vh;
    
   }
   .destinations-page .hero-content {
-    height: 60vh;
+    height: 40vh;
   }
 
   .tour-detail-page .image-main {

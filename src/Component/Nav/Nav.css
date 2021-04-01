@@ -165,17 +165,17 @@ ul{
 }
 
 @media (min-width: 991px){
-  #mainNav .navbar-nav>li>a{
+  #mainNav .navbar-nav>li>a, #mainNav .navbar-nav .btn-login {
     color:rgba(255, 255, 255, 0.96);
   }
-  #mainNav .navbar-nav>li>a:hover{
+  #mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav .btn-login:hover{
     color:rgba(255, 255, 255, 0.582)!important;
   }
-  #mainNav .navbar-nav>li>a:focus{
+  #mainNav .navbar-nav>li>a:focus, #mainNav .navbar-nav .btn-login:focus{
     color:rgba(255, 255, 255, 0.582)!important;
   }
   
-  #mainNav.navbar-shrink .navbar-nav>li>a{
+  #mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav .btn-login{
     color: #191b26;
   }
   .navbar h2:hover{
@@ -222,10 +222,10 @@ ul{
       border-bottom: #16192b13 solid;
   }
   
-  #mainNav.navbar-shrink .navbar-nav a:hover{
+  #mainNav.navbar-shrink .navbar-nav a:hover, #mainNav.navbar-shrink .navbar-nav .btn-login:hover{
     color: rgb(174, 168, 211, 0.8) !important;
   }
-  #mainNav.navbar-shrink .navbar-nav a:focus{
+  #mainNav.navbar-shrink .navbar-nav a:focus, #mainNav.navbar-shrink .navbar-nav .btn-login:hover{
     color: rgb(174, 168, 211, 0.8) !important;
     /* border-bottom: 1px solid #141e29b9; */
   }

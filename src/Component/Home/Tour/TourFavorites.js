@@ -4,7 +4,7 @@ import dataTour from '../../dataTourFavorite.json'
 
 export default function TourFavorites(props) {
     return (
-        <section className="bg-lights pt-4 news" id="tour-favorite">
+        <section className="bg-lights pb-5" id="tour-favorite">
             <div className="container">
                 <div className="favorites-inner pb-2">
                      
@@ -13,9 +13,9 @@ export default function TourFavorites(props) {
                             <p>
                                 <img src="img/icon-tour1.png" alt="" className="icon-bg-light" />
                             </p>
-                            <h2 className="hightlight-underline">TOUR YÊU THÍCH</h2>
+                            <h2>TOUR YÊU THÍCH</h2>
                             <blockquote className="about-quote">
-                                <p>Những tour du lịch được yêu thích và phổ biến nhất, cập nhật kết quả chọn lọc từ những tour du lịch được nhiều người lựa chọn và có kết quả đánh giá cao!</p>
+                                <p className="text-muted-dark">Những tour du lịch được yêu thích và phổ biến nhất, cập nhật kết quả chọn lọc từ những tour du lịch được nhiều người lựa chọn và có kết quả đánh giá cao!</p>
                             </blockquote>
                             <hr />
                         </div>

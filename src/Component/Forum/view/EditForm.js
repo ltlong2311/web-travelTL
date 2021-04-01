@@ -91,7 +91,7 @@ function EditPost(props) {
                     rows="5" 
                   />
                   <button className="btn btn-success mt-2" type="reset" onClick={editDataPost}>Lưu</button>
-                  <button className="btn btn-warning mt-2 ml-1" onClick={() =>props.changeEditPost()}>Đóng</button>
+                  <button className="btn btn-warning mt-2 ml-1" onClick={() => props.changeEditPost()}>Đóng</button>
                 </form>
             </div>
         </div>

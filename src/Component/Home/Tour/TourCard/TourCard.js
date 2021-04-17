@@ -1,5 +1,14 @@
 import React from 'react'
+import ReactStars from "react-rating-stars-component";
 
+
+const ratingStar= {
+    size: 18,
+    value: 4.5,
+    edit: false,
+    color: "#d1d5da"
+  };
+  
 function TourCard(props) {
     const toSlug = (str) =>
     {
@@ -39,13 +48,9 @@ function TourCard(props) {
                     <div className="txt2">{props.quote}</div>
                     <div className="txt3">
                         <div className="left_side">
-                            <div className="stars1">
-                            <img src="img/star1.png" alt="" />
-                            <img src="img/star1.png" alt="" />
-                            <img src="img/star1.png" alt="" />
-                            <img src="img/star1.png" alt="" />
-                            <img src="img/star2.png" alt="" />
-                            </div>
+                            <span className="stars1">
+                               <ReactStars {...ratingStar} />
+                            </span> 
                             <div className="nums"> {props.reviews} Đánh giá</div>
                         </div>
                         <div className="right_side"><a href={"/tours/" + toSlug(props.tourName) + "." + props.tourId + ".html"} onClick={getTourFavorite} className="btn-default btn1">Chi tiết</a></div>

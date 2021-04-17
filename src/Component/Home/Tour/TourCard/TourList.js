@@ -18,16 +18,21 @@ function TourList(props) {
         return str;
     }
     return (
-        <div className="col-md-4 mg-bot-20">
+        <div className="col-md-4 mg-bot-20 tour-card-list">
             <div className="thumbnail">
-            <a href={"/tours/" + toSlug(props.tourName) + "." + props.tourId + ".html"}><img src={props.image} alt="" /></a>
+                <a href={"/tours/" + toSlug(props.tourName) + "." + props.tourId + ".html"} className="tour-image" >
+                    <img src={props.image} alt="" />
+                </a>
             <div className="desc_top">
                 <h3>{props.tourName}</h3>
                 <span>{props.nation}</span>
-                <p><img src={props.nationIcon} alt="" /></p>
+                <p>
+                    <img src={props.nationIcon} alt="" />
+                </p>
             </div>
-            <div className="desc_2">
-                <h3>{props.longTime} Ngày/{props.longTime-1} Đêm </h3>
+            <div className="desc_2 intro">
+                <h3 className="tour-time">{props.longTime} Ngày/{props.longTime-1} Đêm </h3>
+                <h3 className="hotel-level"> 5 stars </h3>
             </div>
             </div>
         </div>

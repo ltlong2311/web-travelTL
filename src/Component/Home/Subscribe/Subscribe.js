@@ -6,7 +6,7 @@ export default function Report() {
       <div className="container">
         <div className="row"></div>
         <div className="col-md-12">
-          <h2 className="hightlight-underline-black text-uppercase black">
+          <h2 className="highlight-underline-black text-uppercase black">
             Theo dõi chúng tôi!
           </h2>
         </div>

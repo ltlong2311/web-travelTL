@@ -2,7 +2,7 @@ import React from "react";
 import TourList from "../Home/Tour/TourCard/TourList";
 function DestionationsHotel() {
   return (
-    <section className="des-content" id="destinations-tour">
+    <section className="des-content" id="destinations-hotel">
       <div className="container">
         <div className="row pb-5">
           <div className="col-md-12 text-center">
@@ -15,7 +15,7 @@ function DestionationsHotel() {
             </p>
           </div>
           <div className="col-md-12 text-center">
-            <h2 className="hightlight-underline">Khách sạn nổi bật</h2>
+            <h2 className="hightlight-underline">KHÁCH SẠN NỔI BẬT</h2>
             <blockquote className="about-quote">
               <p className="text-muted">
                 Cho dù bạn đang tìm kiếm một khu nghỉ dưỡng tuyệt vời bên bờ

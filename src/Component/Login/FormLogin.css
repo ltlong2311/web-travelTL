@@ -1,37 +1,48 @@
 #login-form{
 	margin: 0;
-	color:#9fa5c9;
+	color:#999cab;
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 } 
 /* #login-form .login-form,:after,:before{
     box-sizing:border-box
-}
-#login-form .clearfix:after,.clearfix:before{
-    content:'';
-    display:table
-}
-#login-form .clearfix:after{
-    clear:both;
-    display:block
-}
-#login-form a{
-    color:inherit;
-    text-decoration:none
 } */
 
+
+#login-form button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+#login-form .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+}
 #login-form .login-wrap{
+	position: relative;
+	overflow: auto;
     width: 50%;
-	/* max-width:450px; */
-	min-height:670px;
+	height: 100%;
+	background: rgb(238, 234, 240);
     padding: 0!important;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 #login-form .login-html{
 	width:100%;
 	height:100%;
-	padding:3.2rem 3.6rem;
-	background:rgb(238, 234, 240);
+	padding:3.2rem 3.6rem 2.8rem;
+	/* background:rgb(238, 234, 240); */
     /* background:rgba(40,57,101,.9); */
 }
 .login-html .sign-in-htm,
@@ -55,6 +66,9 @@
 .login-form .group .button{
 	text-transform:uppercase;
 }
+.login-form .foot-lnk a{
+	color: #969ab3;
+}
 .login-html .tab{
 	font-size:18px;
 	margin-right:15px;
@@ -77,6 +91,7 @@
 .login-form .group{
 	margin-bottom:15px;
 }
+
 .login-form .keep-signed-in{
     margin-top: 20px;
 }
@@ -96,8 +111,44 @@
 	border:none;
 	padding:15px 20px;
 	border-radius:25px;
-	background:rgba(255,255,255,0.5);
+	background:rgba(255,255,255,0.8);
 }
+.login-form .sign-in-htm .group .button{
+	/* background:#1161ee; */
+	background: linear-gradient(to left,#7ed817, #0cc70c,#0cc725);
+	/* background: linear-gradient(to left,#09aa16,#c7950c,#6e6f99); */
+	/* background: linear-gradient(to left,#7ed817, #6770c4,#cf4853); */
+	/* background: linear-gradient(to left,#7ed817, #0cc70c,#0cc725); */
+}
+.login-form .sign-in-htm .group .button:hover{
+	background: linear-gradient(to right,#7ed817, #0cc70c,#0cc725);
+}
+.login-form .sign-up-htm .group{
+	margin-bottom:23px;
+}
+.login-form .sign-up-htm .group input{
+    padding:10px 20px;
+	margin-bottom: 10px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1)!important;
+}
+.login-form .sign-up-htm .group .button{
+	padding:10px 20px;
+	/* background: linear-gradient(to left,#7ed817, #6770c4,#cf4853); */ 
+	background: linear-gradient(to left,#ffd54f, #d500f9); 
+}
+.login-form .sign-up-htm .group .button:hover{
+	background: linear-gradient(to right,#ffd54f, #d500f9); 
+}
+.login-form .sign-up-htm .group label{
+    display: none;
+}
+.login-form .sign-up-htm .button-register{
+	margin-top: 26px;
+}
+.login-form .sign-up-htm .hr{
+	margin: 40px 0 35px 0;
+}
+
 /* .login-form .group input[data-type="password"]{
 	text-security:circle;
 	-webkit-text-security:circle;
@@ -105,9 +156,6 @@
 .login-form .group .label{
 	color:rgb(112, 112, 112);
 	font-size:12px;
-}
-.login-form .group .button{
-	background:#1161ee;
 }
 .login-form .button-register{
    margin-top: 40px;
@@ -163,7 +211,7 @@
 .hr{
 	height:2px;
 	margin:40px 0 35px 0;
-	background:rgba(46, 41, 41, 0.3);
+	background:rgba(30, 22, 36, 0.3);
 }
 .foot-lnk{
 	text-align:center;
@@ -183,12 +231,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70vw;
+    width: 65vw;
+	height: 70vh;
     z-index: 1033;
     display: flex; 
     flex-direction: row;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+
 }
 #login-form .login-image{
-    width:55%;
-    background-color: #1161ee;
+	background:rgba(64, 68, 40, 0.09);
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
+#login-form .image-header{
+	width: 55%;
+	position: relative;
+}
+

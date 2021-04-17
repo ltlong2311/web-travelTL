@@ -10,7 +10,7 @@ export default function Destinations() {
               <p>
                 <img src="img/icon-our-asia.svg" alt="" className="icon-svg" />
               </p>
-              <h2 className="hightlight-underline">ĐIỂM ĐẾN CHÂU Á</h2>
+              <h2 className="highlight-underline">ĐIỂM ĐẾN CHÂU Á</h2>
               <blockquote className="about-quote">
                 <p className="text-muted-dark">Là quê hương của một số nền văn hóa đầy màu sắc nhất thế giới và những điểm đến kỳ lạ, Châu Á là một bữa tiệc thực sự cho các giác quan. Đi sâu vào lựa chọn quốc gia của chúng tôi để khám phá một loạt các hành trình thú vị và đầy cảm hứng.</p>
               </blockquote>
@@ -48,7 +48,7 @@ export default function Destinations() {
           <div className="row">
             <div className="col-md-5 mg-bot-20">
               <div className="thumbnail">
-                <a href="tour.html"><img src="img/thailand.jpg" alt="" /></a>
+                <a href="/destinations"><img src="img/thailand.jpg" alt="" /></a>
                 <div className="desc">
                   <h3>THAILAND</h3>
                   <p><img src="img/flags/icon-thailand.png" alt="" /></p>
@@ -115,7 +115,7 @@ export default function Destinations() {
             </div>
             <div className="col-md-6 mg-bot-20">
               <div className="thumbnail">
-                <a href="tour.html"><img src="img/multi-country.jpg" alt="" className="img-black"/></a>
+                <a href="/destinations"><img src="img/multi-country.jpg" alt="" className="img-black"/></a>
                 <div className="desc">
                   <h3>MULTI COUNTRY</h3>
                   <p><img src="img/flags/icon-multi-country.png" alt=""  /></p>

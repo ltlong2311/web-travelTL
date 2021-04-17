@@ -22,7 +22,7 @@
         }
     }
     .section-heading{
-        animation: intro 2s 3s 1;
+        animation: intro 2s 1;
     }
     @keyframes intro {
         0% {

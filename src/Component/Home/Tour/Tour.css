@@ -3,28 +3,19 @@
     position: relative;
 }
 
-.pd-bottom-4cd router0 {
+.pd-bottom-4cd{
     padding-bottom: 40px;
 }
 #destination{
     padding: 0;
 }
 #destination .icon-svg{
-    margin-top: -35px;
+    margin-top: -25px;
 }
-@media (min-width: 992px){
-    .icon-our-asia, .icon-svg {
-        width: 71px;
-        height: 71px;
-        margin-top: -100px;
-    }
+.tour-card-list .intro .hotel-level{
+    display: none;
 }
-@media (max-width: 992px){
-    .icon-our-asia, .icon-svg {
-        width: 61px;
-        height: 61px;
-    }
-}
+
 .thumbnail {
     height: 220px;
     overflow: hidden;
@@ -50,6 +41,7 @@
 }
 .thumbnail .desc, .desc_2 {
     position: absolute;
+    height: 50px;
     left: 0;
     width: 100%;
     display: flex;
@@ -107,49 +99,6 @@
     height: 330px;
 }
 
-@media (min-width: 992px){
-    .icon-img {
-        width: 90px;
-        height: 90px;
-        margin-top: -100px;
-    }
-    .btn-view-more::after{
-        content: "Xem thêm";
-        border: 1px solid #5a5e5f00;
-        text-decoration: none;
-        top: 0;
-        left: 0;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 3px 41px;
-        border-radius: 4px;
-        position: absolute;
-        color: #6b6e6e18;
-        background-color: #9dc77b23!important;
-        z-index: -1;
-        transition: all .4s;
-        transform: scale(1.05);
-    }
-}
-@media (max-width: 992px){
-    .icon-img {
-        width: 81px;
-        height: 81px;
-    }
-}
-
-@media (min-width: 992px){
-    .icon-bg-light {
-        width: 100px;
-        height: 100px;
-    }
-}
-@media (max-width: 992px){
-    .icon-bg-light {
-        width: 81px;
-        height: 81px;
-    }
-}
 .mg-bt-40 {
     margin-bottom: 40px;
 }
@@ -396,21 +345,61 @@
 .stars1 {
     display: inline-block;
 }
-@media (max-width: 768px){
-    .slide-show{
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    .slide-tour{
-        width: 100%;
-        height: 100%;
-    }
-
-    
+.stars1 .react-stars span:last-of-type{
+    float: none!important;
 }
 .slide-tour input{
     display: none;
+}
+@media (min-width: 992px){
+    .icon-our-asia, .icon-svg {
+        width: 71px;
+        height: 71px;
+        margin-top: -100px;
+    }
+    .icon-img {
+        width: 90px;
+        height: 90px;
+        margin-top: -100px;
+    }
+    .btn-view-more::after{
+        content: "Xem thêm";
+        border: 1px solid #5a5e5f00;
+        text-decoration: none;
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 3px 41px;
+        border-radius: 4px;
+        position: absolute;
+        color: #6b6e6e18;
+        background-color: #9dc77b23!important;
+        z-index: -1;
+        transition: all .4s;
+        transform: scale(1.05);
+    }
+    .icon-bg-light {
+        width: 90px;
+        height: 90px;
+    }
+}
+@media (max-width: 992px){
+    .icon-img {
+        width: 81px;
+        height: 81px;
+    }
+    .icon-our-asia, .icon-svg {
+        width: 61px;
+        height: 61px;
+    }
+    .icon-bg-light {
+        width: 81px;
+        height: 81px;
+    }
+    .thumbnail .desc h3, .desc_2 h3 {
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 768px){
@@ -612,4 +601,22 @@
     font-size: 12px;
     color: #c2c2c2;
     padding-left: 5px;
+}
+
+@media (max-width: 768px){
+    .slide-show{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .slide-tour{
+        width: 100%;
+        height: 100%;
+    }
+    .thumbnail .desc h3, .desc_2 h3 {
+        font-size: 18px;
+    }
+}
+.slide-tour input{
+    display: none;
 }

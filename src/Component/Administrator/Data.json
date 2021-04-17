@@ -1,0 +1,33 @@
+[
+    {
+        "id":9841,
+        "name":"Hồ Văn Hân",
+        "tel":"0903420482",
+        "Permission":1
+    },
+    {
+        "id":4234,
+        "name":"Trịnh Đức Quang",
+        "tel":"0903420482",
+        "Permission":2
+    },
+    {
+        "id":1231,
+        "name": "Trần Văn Trung",
+        "tel": "0903420482",
+        "Permission":3
+    },
+    {
+        "id":9838,
+        "name": "Hoàng Thị Lan",
+        "tel": "0903420482",
+        "Permission":3
+    },
+    {
+        "id":5733,
+        "name": "Nguyễn Văn Tên",
+        "tel": "0933827834",
+        "Permission":3
+    }
+  
+]

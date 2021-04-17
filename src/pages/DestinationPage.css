@@ -6,10 +6,12 @@
     position: relative;
     background: #fff;
 } */
+
+
 .destinations-page section{
     padding: 0;
 }
-.title-page:after, .hightlight-underline:after{
+.title-page:after, .highlight-underline:after{
     content: "";
     bottom: -10px;
     height: 1px;
@@ -20,7 +22,7 @@
     right: 0;
     margin: auto;
 }
-.title-page, .hightlight-underline{
+.title-page, .highlight-underline{
     line-height: 1.4;
     font-weight: 500;
     color: #444;
@@ -52,6 +54,17 @@
 #destinations-hotel .thumbnail {
     height: 330px;
 }
+#destinations-hotel .tour-card-list .intro .hotel-level{
+    display: block;
+}
+#destinations-hotel .tour-card-list .intro .tour-time{
+    display: none;
+}
+#destinations-hotel .tour-card-list .tour-image img{
+    filter: brightness(80%);
+}
+
+
 @media (min-width: 992px) {
     #illustration-box{
         width: 800px;
@@ -73,4 +86,14 @@
         height: auto;
         padding-bottom: 20px;
     }
+    .icon-destination-tour, .icon-contacts {
+        width: 4rem;
+        height: 4rem;
+        margin-top: -30px;
+    }
+    #destinations-hotel .thumbnail {
+        height: 330px;
+    }
+    
 }
+

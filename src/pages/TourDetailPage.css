@@ -1,0 +1,272 @@
+@import "react-slideshow-image/dist/styles.css";
+
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+}
+
+.each-slide span {
+    padding: 20px;  
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+}
+
+.tour-detail-page .react-slideshow-container .default-nav {
+    height: 30px;
+    background: rgba(179, 179, 179, 0.211);
+    width: 30px;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+    color: #2a3296;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tour-detail-page .react-slideshow-container .default-nav:hover{
+    background: rgba(238, 238, 238, 0.578);
+}
+.tour-detail-page .react-slideshow-container .default-nav svg{
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 2px 3px 2px 7px;
+}
+.tour-detail-page .react-slideshow-container .default-nav svg path{
+   fill: #555e5fc1;
+   padding: 10px;
+}
+.tour-detail-page .react-slideshow-container .default-nav:hover path{
+    fill: #555e5fe3;
+}
+.tour-detail-page section{
+    padding: 0;
+}
+.tour-detail-page section h2{
+    font-size: 2rem;
+}
+.container{
+    position: relative;
+}
+.tour-detail-page .icon-nation-tour{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: cadetblue;
+    width: 61px;
+    height: 40px;
+}
+.tour-detail-page .icon-center{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.tour-detail-page .icon-bg-dark{
+    width: 4rem;
+    height: 4rem;
+    margin-top: -30px;
+}
+.tour-detail-page .icon-contacts{
+    width: 4rem;
+    height: 4rem;
+    margin-top: 15px;
+}
+.icon-map-asia{
+    padding: 5px 15px 10px 15px;
+}
+#illustration-box{
+    margin: auto;
+}
+#illustration-box .illustration-item img{
+    width: 100%;
+    height: 180px;
+    /* object-fit: cover; */
+    padding-bottom: 20px;
+}
+#tour-related .thumbnail {
+    height: 300px;
+}
+#tour-hotel .thumbnail {
+    height: 300px;
+}
+#tour-hotel .tour-card-list .intro .hotel-level{
+    display: block;
+}
+#tour-hotel .tour-card-list .intro .tour-time{
+    display: none;
+}
+#tour-hotel .tour-card-list .tour-image img{
+    filter: brightness(80%);
+}
+#tour-info .title {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600!important;
+    color: #666;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgba(0,0,0,.15);
+}
+#tour-info .schedule-tour .days .titDay{
+    padding: 2px 1px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #454545;
+    text-decoration: none;
+}
+#tour-info .schedule-tour .days .titDay:after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #ed0080;
+    top: 18px;
+    left: 3px;
+    z-index: 999;
+}
+#tour-info .schedule-tour .days .titDay:before {
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: solid 1px #ed0080;
+    left: -1px;
+    
+    z-index: 998;
+}
+#tour-info .schedule-tour .days {
+    position: relative;
+}
+#tour-info .schedule-tour .days:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    bottom: 0;
+    border-left: solid 1px rgba(0,0,0,.05);
+    z-index: 997;
+}
+#tour-info .schedule-tour .days .card-header{
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    /* background-color: rgba(0,0,0,.03); 
+    border-bottom: 1px solid rgba(0,0,0,.125); */
+    background-color: #fff;
+    border: none;
+}
+#tour-info .schedule-tour .days .card-body {
+    padding: 0px 20px 15px;
+    font-size: 14px;
+    color: #5e6163;
+}
+#tour-info .info-service li{
+    list-style: circle;
+}
+#tour-info .info-service li, #tour-info .info-service strong{
+    font-size: 15px;
+    color: #4c5153;
+    line-height: 30px;
+}
+#tour-info .schedule-tour .days .card {
+    position: relative;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /* border: 1px solid rgba(0,0,0,.125); */
+    /* border-radius: .25rem; */
+    border: none;
+}
+#tour-info .schedule-tour .days .titDay span {
+    color:#ed0080;
+}
+#tour-info .tour-note .note{
+    color:#5e6163;
+    font-size: 15px;
+}
+#tour-info .book-tour .category-topic th{
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    border-top: none;
+}
+#tour-info .book-tour .btn-book:hover {
+    background: #666;
+}
+#tour-info .book-tour .btn-book {
+    background: #ed0080;
+    background: linear-gradient(180deg,#ed0080 0,#be3b98 100%);
+    color: #fff;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+#tour-info .book-tour .btn-view-detail:hover {
+    background: #666;
+    border-color: #666;
+    color: #fff;
+}
+#tour-info .book-tour .btn-view-detail {
+    border: solid 1px #ed0080;
+    color: #ed0080;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+#accordion [aria-expanded=false]>.expanded, #accordion [aria-expanded=true]>.collapsed {
+    display: none;
+}
+@media (min-width: 992px) {
+    #illustration-box{
+        width: 800px;
+    }
+    .tour-detail-page .icon-contacts {
+        margin-top: 30px;
+        width: 4rem;
+        height: 4rem;
+    }
+    .icon-destination-hotel {
+        margin-top: 20px;
+        width: 4rem;
+        height: 4rem;
+    }
+}
+@media (max-width: 992px) {
+    #illustration-box .illustration-item img{
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .tour-detail-page section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px){
+    .tour-detail-page section h2 {
+        font-size: 1.5rem;
+    }
+    #tour-info .schedule-tour .days .titDay{
+        line-height: 25px;
+    }
+    #tour-info .schedule-tour .days .titDay:after {
+        top: 21px;
+        left: 3px;
+    }
+    #tour-info .schedule-tour .days .titDay:before {
+        top: 17px;
+        left: -1px;
+    }
+}

@@ -68,7 +68,7 @@
       "tourName":"Thành Osaka",
       "nation":"Nhật Bản",
       "image":"/img/japan56.jpg",
-      "icon": "img/flags/icon-japan.png",
+      "icon": "/img/flags/icon-japan.png",
       "longTime": 6
    },
    {

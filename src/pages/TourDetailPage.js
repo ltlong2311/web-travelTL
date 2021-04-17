@@ -1,8 +1,15 @@
 import React from 'react'
 import Header from '../Component/Header/Header'
-import TourDetail from '../Component/Home/Tour/TourDetail/TourDetail'
 import dataTourFavorite from '../Component/dataTourFavorite.json'
 import dataTour from '../Component/tourData.json'
+import TourReview from '../Component/Tour/TourReview'
+import TourRelated from '../Component/Tour/TourRelated'
+import TourSubscribe from '../Component/Tour/TourSubscribe'
+import TourContact from '../Component/Tour/TourContact'
+import './TourDetailPage.css'
+import TourInfo from '../Component/Tour/TourInfo'
+import TourHighlights from '../Component/Tour/TourHighlights'
+
 
 function TourDetailPage(props) {
     console.log(props);
@@ -18,16 +25,19 @@ function TourDetailPage(props) {
                       longTime={value.days} 
                       image={value.image} 
                     />
-                    <TourDetail
+                    <TourReview
                       valueTourFavorite={value}
-                      img={value.img}
                       place={value.place}
                       tourName={value.tourName}
                       longTime={value.days}
-                      cost={value.cost}
-                      quote={value.quote}
+                      icon={value.icon}
                       reviews={value.reviews}
                     />
+                    <TourHighlights />
+                    <TourInfo />
+                    <TourRelated />
+                    <TourContact />
+                    <TourSubscribe />
                   </div>  
                 )
             }
@@ -42,16 +52,18 @@ function TourDetailPage(props) {
                       longTime={value.longTime} 
                       image={value.image} 
                     />
-                    <TourDetail
+                    <TourReview
                       valueTourFavorite={value}
-                      img={value.img}
+                      icon={value.icon}
                       place={value.place}
                       tourName={value.tourName}
-                      longTime={value.longTime}
-                      cost={value.cost}
-                      quote={value.quote}
                       reviews={value.reviews}
                     />
+                    <TourHighlights />
+                    <TourInfo />
+                    <TourRelated />
+                    <TourContact />
+                    <TourSubscribe />
                   </div>  
                 )
             }

@@ -30,7 +30,7 @@ function MyPost(props) {
             const content = element.val().content;
             const poster = element.val().poster;
             const posterImg = element.val().posterImg;
-            if(poster === "Travel TL"||poster === "Ẩn danh"){   // note: bo sung them idUser de xac dinh truong hop dang bai an danh
+            if(poster === "Travel TL"){   // note: bo sung them idUser de xac dinh truong hop dang bai an danh
               arrayData.push({
                 id: key,
                 title: title,

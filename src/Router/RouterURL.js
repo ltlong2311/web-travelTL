@@ -11,7 +11,7 @@ import Details from "../Component/Details/NewsDetails";
 import Home from "../Component/Home/Home";
 import Forum from "../Component/Forum/Forum";
 
-import DestinationsPage from "../pages/DestinationsPage";
+import DestinationPage from "../pages/DestinationPage";
 import TourDetailPage from "../pages/TourDetailPage";
 // import News from '../Component/Home/News/News';
 
@@ -34,7 +34,7 @@ export default class RouterURL extends Component {
           </Route>
           <Route path="/news/:slug.:id.html" component={Details} />
           <Route path="/tours/:slug.:id.html" component={TourDetailPage}/>
-          <Route path="/destinations" component={DestinationsPage}/>
+          <Route path="/destinations" component={DestinationPage}/>
         </Switch>
       </>
     );

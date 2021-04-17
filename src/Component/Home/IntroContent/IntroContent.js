@@ -8,23 +8,23 @@ export default class Body extends Component {
             <section className="features des-content" id="intro">
               <div className="container" >
                 <div className="section-heading text-center">
-                  <h2> Welcome to Travel TL </h2>{" "}
+                  <h2> Welcome to Travel TL </h2>
                   <p className="text-muted">
-                    Du lịch và khám phá mọi nơi trên thế giới!{" "}
+                    Du lịch và khám phá mọi nơi trên thế giới!
                   </p>
                   <hr />
                 </div>
-                <div className="row">
-                <div className="col-lg-4 slideL">
-                    <div className="slider">
-                      <div className="slide"><p>1</p></div>
-                      <div className="slide"><p>2</p></div>
-                      <div className="slide"><p>3</p></div>
-                      <div className="slide"><p>4</p></div>
-                      <div className="slide"><p>5</p></div>
-                    </div>
-                
-                </div>
+                <div className="row slide-intro">
+                  <div className="col-lg-4 slideL">
+                      <div className="slider">
+                        <div className="slide"><p>1</p></div>
+                        <div className="slide"><p>2</p></div>
+                        <div className="slide"><p>3</p></div>
+                        <div className="slide"><p>4</p></div>
+                        <div className="slide"><p>5</p></div>
+                      </div>
+                  
+                  </div>
                   <div className="col-lg-8 my-auto">
                     <div className="container-fluid">
                       <div className="row">

@@ -1,18 +1,17 @@
 import React from 'react'
 import TourList from '../Home/Tour/TourCard/TourList'
-import './Destionations.css'
-function DestinationsTour() {
+function TourRelated() {
     return (
-        <section className="des-content bg-darks" id="destinations-tour">
+        <section className="des-content bg-darks" id="tour-related">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <p>
-                           <img src="/img/icon-menu/icon-tour.png" alt="" className="icon-destination-tour" />
+                           <img src="/img/icon-menu/icon-tour-related.png" alt="" className="icon-destination-tour" />
                         </p>
                     </div>
                     <div className="col-md-12 text-center">
-                        <h2 className="hightlight-underline">DU LỊCH CHÂU Á</h2>
+                        <h2 className="highlight-underline">TOUR LIÊN QUAN</h2>
                         <blockquote className="about-quote">
                             <p className="text-muted-dark">Những trải nghiệm cổ điển đặc trưng, những buổi đi dạo phố náo nhiệt, những kỳ nghỉ dưỡng thăm quan di sản và những chuyến phiêu lưu ngoài trời đẹp như tranh vẽ là một trong số nhiều chuyến đi bổ ích có ở Châu Á.!</p>
                         </blockquote>
@@ -59,4 +58,4 @@ function DestinationsTour() {
     )
 }
 
-export default DestinationsTour
+export default TourRelated

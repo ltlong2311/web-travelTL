@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import ReactStars from "react-rating-stars-component";
 
 export default function Header(props) {
     // const [count, setCount] = useState(0);
@@ -27,7 +28,22 @@ export default function Header(props) {
     // }
     // window.onload = changeImg;
     
-
+    const ratingHeader = {
+        size: 40,
+        count: 5,
+        color: "#fff",
+        activeColor: "#fff",
+        value: 0,
+        a11y: true,
+        isHalf: true,
+        emptyIcon: <i className="far fa-star" />,
+        halfIcon: <i className="fa fa-star-half-alt" />,
+        filledIcon: <i className="fa fa-star" />,
+        onChange: (newRating) => {
+          console.log(`New rating is ${newRating}`);
+        }
+    };
+    
     return (
         <header className='hero-container'>
             <div className="header-main">
@@ -36,6 +52,10 @@ export default function Header(props) {
                     <div id="wrapper">
                         <h1>{props.title}</h1>
                         <div className="tour-time">{props.longTime} Ngày/ {props.longTime -1} Đêm</div>
+                        <div className="rating-header">
+                            <ReactStars {...ratingHeader} />
+                            <span className="rating-point">4.5{props.ratingPoint} /{props.numReview} đánh giá <i className="fas fa-star"></i></span>
+                        </div>
                         <div className="inputSearch">
                             <form action="/Search" method="get">
                                 <div className="title-slide" >

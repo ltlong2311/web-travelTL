@@ -180,7 +180,7 @@ function Nav(props) {
                           className="nav-link"
                         >
                           <img
-                            src="/img/icon-menu/icon-tour1.png"
+                            src="/img/icon-menu/icon-tour-favorite.png"
                             alt=""
                             className="icon-nav"
                           />{" "}
@@ -195,7 +195,7 @@ function Nav(props) {
                           className="nav-link"
                         >
                           <img
-                            src="/img/icon-menu/icon-tour2.png"
+                            src="/img/icon-menu/icon-tour-2.png"
                             alt=""
                             className="icon-nav"
                           />{" "}

@@ -17,7 +17,6 @@ export default function NewPage() {
                             <blockquote className="about-quote">
                                 <p>Cung cấp thông tin du lịch cập nhật và chính xác nhất, đem lại cho bạn những thông tin hữu ích cho việc lựa chọn và trải nghiệm chuyến du lịch tuyệt vời của mình!</p>
                             </blockquote>
-                            <hr />
                         </div>
                     </div>
 

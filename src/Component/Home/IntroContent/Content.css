@@ -6,7 +6,7 @@
 section.features .section-heading h2 {
     margin-top: 10px;
     color: #444;
-    font-size: 50px!important;
+    font-size: 50px;
 }
 @media (min-width: 992px){
     section.features .feature-item i{
@@ -38,13 +38,18 @@ section.features .section-heading h2 {
     }
     
 }
+@media (max-width: 768px){
+  section.features .feature-item i {
+      font-size: 50px;
+  }
+}
 
 @media (min-width:992px){
     section.features .device-container{
        margin-bottom:0;
     }
 }
-.slideL{
+.slide-intro .slideL{
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -55,7 +60,7 @@ section.features .section-heading h2 {
     
 } */
 
-.slider {
+.slide-intro .slider {
     display: flex; 
     width: 500%;
     height: 50%;
@@ -65,11 +70,11 @@ section.features .section-heading h2 {
     left: 0;
     animation: slide 20s infinite;
 }
-.slideL:hover {
+.slide-intro .slideL:hover {
   transform: scale(1.08);
   cursor: move;
 }
-.slider > * {
+.slide-intro .slider > * {
     position: relative;
     left: 0px;
     display: block;
@@ -79,7 +84,7 @@ section.features .section-heading h2 {
     overflow: hidden;
  } 
 
- .slide:nth-child(1) {
+ .slide-intro .slide:nth-child(1) {
     border-radius: 50%;
     background-color: cyan;
     background-image: url(./slide/img.jpg) ;
@@ -87,7 +92,7 @@ section.features .section-heading h2 {
     background-position: center;
  } 
 
- .slide:nth-child(2) {
+ .slide-intro .slide:nth-child(2) {
     /* animation-delay: 2s; */
     border-radius: 50%;
     background-image: url(./slide/slide-4.jpg) ;
@@ -95,14 +100,14 @@ section.features .section-heading h2 {
     background-size: cover;
     background-position: center;
  }
- .slide:nth-child(3) {
+ .slide-intro .slide:nth-child(3) {
     border-radius: 50%;
     background-image: url(./slide/travel-3.jpg) ;
     background-color: transparent;
     background-size: cover;
     background-position: center;
  }
- .slide:nth-child(4) {
+ .slide-intro .slide:nth-child(4) {
     /* animation-delay: 4s; */
     border-radius: 50%;
     background-color: #fff;
@@ -110,14 +115,14 @@ section.features .section-heading h2 {
     background-size: cover;
     background-position: center;
  }
- .slide:nth-child(5) {
+ .slide-intro .slide:nth-child(5) {
   border-radius: 50%;
   background-color: cyan;
   background-image: url(./slide/img.jpg) ;
   background-size: cover;
   background-position: center;
  } 
- .slide p {
+ .slide-intro .slide p {
     font-family: 'Courier New', Courier, monospace;
     font-size:70px;
     text-align: center;

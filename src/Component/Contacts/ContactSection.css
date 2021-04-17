@@ -1,0 +1,18 @@
+.fav-section .btn-contact:hover a {
+    color: rgba(255, 255, 255, 0.932);
+}
+.fav-section .btn-contact {
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    margin: 0 0 10px;
+    border: 1px solid #80b157!important;
+    padding: 3px 20px;
+    border-radius: 4px!important;
+    cursor: pointer;
+}
+.fav-section a {
+    color: #5d6162;
+    font-size: 1.2em;
+    text-decoration: none;
+}

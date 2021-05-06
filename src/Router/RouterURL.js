@@ -6,10 +6,10 @@ import {
   // Link
 } from "react-router-dom";
 // import Body from '../Component/Home/Body/Body';
-import Contacts from "../pages/ContactsPage";
+import ContactsPage from "../pages/ContactsPage";
 import Details from "../Component/Details/NewsDetails";
-import Home from "../Component/Home/Home";
-import Forum from "../Component/Forum/Forum";
+import HomePage from "../Component/Home/Home";
+import ForumPage from "../Component/Forum/Forum";
 
 import DestinationPage from "../pages/DestinationPage";
 import TourDetailPage from "../pages/TourDetailPage";
@@ -21,16 +21,16 @@ export default class RouterURL extends Component {
       <>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <HomePage />
           </Route>
           <Route path="/home">
-            <Home />
+            <HomePage />
           </Route>
           <Route path="/forum">
-            <Forum />
+            <ForumPage />
           </Route>
           <Route path="/contacts">
-            <Contacts />
+            <ContactsPage />
           </Route>
           <Route path="/news/:slug.:id.html" component={Details} />
           <Route path="/tours/:slug.:id.html" component={TourDetailPage}/>

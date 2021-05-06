@@ -176,19 +176,19 @@ function TourInfo() {
               <div className="title">
                 <i className="far fa-compass icon-tour-info"/> Tour khởi hành
               </div>
-              <div className="content">
-                <table className="table table">
+              <div className="content table-responsive">
+                <table className="table table-sm">
                   <thead className="category-topic">
                     <tr>
                       <th scope="col">STT</th>
-                      <th scope="col">Ngày khởi hành</th>
-                      <th scope="col">Thông tin chuyến đi</th>
+                      <th style={{minWidth:"130px"}} scope="col">Ngày khởi hành</th>
+                      <th style={{minWidth:"200px"}} scope="col">Thông tin chuyến đi</th>
                       <th scope="col">Giá</th>
-                      <th scope="col">Trạng thái</th>
-                      <th scope="col">Book</th>
+                      <th style={{minWidth:"90px"}} scope="col">Trạng thái</th>
+                      <th style={{minWidth:"170px"}} scope="col">Book</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="category-list">
                     <tr>
                       <td>1</td>
                       <td>21/4/2021</td>

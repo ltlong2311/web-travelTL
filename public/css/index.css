@@ -98,7 +98,8 @@ section.cta {
   position: relative;
   z-index: 999;
   padding: 25px 0;
-  background-image: url(../img/bg-9.jpg);
+  /* background-image: url(../img/bg-9.jpg); */
+  background-image: url(../img/multi-country-5.jpg);
   background-position: center;
   background-size: cover;
 }

@@ -14,19 +14,14 @@ import ScrollTop from "./Component/ScrollTop/ScrollTop";
 import Image from "./Component/ShowImage/Image";
 import FormLogin from "./Component/Login/FormLogin";
 
-
-
+import Aos from 'aos';
+import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
 function App(props) {
- 
-  // useEffect(() => {
-  //   toast.success(props.notify);
-  // }, [props.numNotify]);
-
-  // const notify = () =>{
-  //   if(props.isNotify===true){
-  //    toast.success(props.notify);
-  //   }
-  // }
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+  
    const showImageReview  = () => {
         if(props.showImageDes){
           return <Image />
@@ -62,4 +57,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(App)
-

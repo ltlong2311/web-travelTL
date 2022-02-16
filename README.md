@@ -6,6 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Realtime Database
 
-# UI:
+# UI
 
 https://youtu.be/n_Gpjmlxpac
